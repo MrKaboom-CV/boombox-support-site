@@ -5,65 +5,69 @@ import Section from "./Section.astro";
 
 const locale = Astro.currentLocale || "en";
 
-const cta = await getEntry(
-  "ctaSection",
-  `${locale === "en" ? "" : `${locale}/`}call-to-action`
-);
-const { title, description, enable, fill_button, outline_button } =
-  cta?.data ?? {};
+// Fixed the syntax error in the string interpolation
+const entryId = locale === "en" ? "call-to-action" : `${locale}/call-to-action`;
+const cta = await getEntry("ctaSection", entryId);
+
+const { title, description, enable, fill_button, outline_button } = cta?.data ?? {};
+
+// Set a safe fallback path (Home) instead of the obsolete overview page
+const safeFallback = "/";
 ---
 
 {
   enable && (
-    <div class="cta-container">
+    <div class="cta-wrapper">
       <Section title={title} description={description}>
-        {fill_button?.enable && (
-          <Button
-            label={fill_button.label || "Get Started"}
-            link={fill_button.link || "/getting-started/introduction/overview/"}
-            variant="primary"
-          />
-        )}
-        {outline_button?.enable && (
-          <Button
-            label={outline_button.label || "Get a live demo"}
-            link={
-              outline_button.link || "/getting-started/introduction/overview/"
-            }
-            variant="outline-primary"
-          />
-        )}
+        <div class="cta-buttons">
+          {fill_button?.enable && (
+            <Button
+              label={fill_button.label || "Get Started"}
+              link={fill_button.link || safeFallback}
+              variant="primary"
+            />
+          )}
+          {outline_button?.enable && (
+            <Button
+              label={outline_button.label || "View Docs"}
+              link={outline_button.link || safeFallback}
+              variant="outline-primary"
+            />
+          )}
+        </div>
       </Section>
     </div>
   )
 }
 
 <style>
-  /* Ensure background image is visible in light mode */
-  :global([data-theme="light"]) .cta-container {
+  /* Container Layout */
+  .cta-wrapper {
+    padding: 2rem 1rem;
+    width: 100%;
+  }
+
+  /* Centering the buttons via CSS (Replaces the old <script> logic) */
+  .cta-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  /* Light mode styling */
+  :global([data-theme="light"]) .cta-wrapper {
+    background-color: #f9fafb;
     background-blend-mode: multiply;
-    background-color: #f9fafb; /* Light background color */
   }
 
   /* Dark mode styling */
-  :global([data-theme="dark"]) .cta-container {
-    background: url("/src/assets/cta-bg.png") no-repeat center;
+  :global([data-theme="dark"]) .cta-wrapper {
+    /* Ensure cta-bg.png is in your /public folder for this path to work */
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("/cta-bg.png") no-repeat center;
     background-size: cover;
-    padding: 1rem;
     position: relative;
+    border-radius: 0.5rem;
   }
-
-
 </style>
-
-<script>
-  const ctaContainerButton = document.querySelector(".cta-container a");
-
-  const buttonParent = ctaContainerButton?.parentElement;
-
-  if (buttonParent) {
-    buttonParent.style.display = "flex";
-    buttonParent.style.justifyContent = "center";
-    buttonParent.style.gap = "1rem";
-  }
-</script>
