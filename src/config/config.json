@@ -1,11 +1,12 @@
 {
   "site": {
-    "title": "DocKit",
-    "logo": "/src/assets/logo-light.svg",
-    "logo_darkmode": "/src/assets/logo-dark.svg",
+    "title": "BooMBox Card Vault",
+    "description":"AI Forensic Collectible Card Vault & Market Tracker" 
+    "logo": "/src/assets/BooMBox-title.png",
+    "logo_darkmode": "/src/assets/BooMBox-title.png",
     "logo_width": "127",
     "logo_height": "32",
-    "logo_text": "DocKit"
+    "logo_text": "BooMBox"
   },
 
   "settings": {
@@ -18,7 +19,7 @@
       "enable": true,
       "action": "#"
     },
-    "copyright": "Designed and Developed by <a class=\"text-primary hover:underline no-underline\" href=\"https://themefisher.com\" target=\"_blank\" rel=\"noopener\" aria-label=\"Themefisher\">Themefisher</a> Copyright &copy; 2025."
+    "copyright": "Designed and Developed by MrKaboom"
   },
 
   "navigation_button": {
