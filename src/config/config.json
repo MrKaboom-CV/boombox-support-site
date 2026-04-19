@@ -1,13 +1,15 @@
 {
   "site": {
     "title": "BooMBox Card Vault",
-    "description": "AI Forensic Collectible Card Vault & Market Tracker", 
-    "logo": "./src/assets/Boom_ico_main.png",
-    "logo_darkmode": "./src/assets/Boom_ico_main.png",
-    "logo_width": "127",
-    "logo_height": "32",
+    "description": "AI Forensic Collectible Card Vault & Market Tracker",
+    "logo": "./src/assets/boombox-logo-main.jpg", 
+    "logo_darkmode": "./src/assets/boombox-logo-main.jpg",
+    "logo_width": "160", 
+    "logo_height": "40",
     "logo_text": "BooMBox"
-  },
+  }
+}
+
 
   "settings": {
     "search": true,
