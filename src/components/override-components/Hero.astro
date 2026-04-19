@@ -1,5 +1,6 @@
 ---
-/* Your existing imports here */
+// 1. Import your video file from the assets folder
+import boomIntroVideo from "../../assets/boom-intro.mp4";
 ---
 
 <section class="hero-section bg-[#0d0d0d] py-20 px-4">
@@ -11,8 +12,21 @@
       AI Forensics & Digital Grading. Professional-grade analysis for high-value collectibles.
     </p>
 
-    <div class="video-container border-2 border-[#00ff41] rounded-xl overflow-hidden bg-black aspect-video flex items-center justify-center">
-      <p class="text-[#00ff41] animate-pulse">NANO BANANA ENGINE: SCANNING IN PROGRESS...</p>
-      </div>
+    <div class="video-container border-2 border-[#00ff41] rounded-xl overflow-hidden bg-black aspect-video flex items-center justify-center shadow-[0_0_20px_rgba(0,255,65,0.2)]">
+      
+      <video 
+        src={boomIntroVideo} 
+        width="100%" 
+        height="auto" 
+        autoplay 
+        muted 
+        loop 
+        playsinline
+        class="w-full h-full object-cover"
+      >
+        Your browser does not support the video tag.
+      </video>
+
+    </div>
   </div>
 </section>
