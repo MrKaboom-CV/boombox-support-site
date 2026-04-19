@@ -17,14 +17,11 @@
       "enable": true,
       "action": "/contact/"
     },
-    "copyright": "© 2026 BooMBox. Designed and Developed by MrKaboom"
+    "copyright": "© 2026 BooMBox. Designed and Developed by MrBoom"
   },
   "navigation_button": {
-    "enable": false,
-    "label": "Launch Lab",
-    "translations": {
-      "fr": "Lancer le Labo"
-    },
-    "link": "/getting-started/navigation/"
-  }
+  "enable": false, 
+  "label": "Launch Lab",
+  "link": "/" 
+}
 }

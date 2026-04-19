@@ -5,32 +5,32 @@ import Section from "./Section.astro";
 
 const locale = Astro.currentLocale || "en";
 
-// Fixed the syntax error in the string interpolation
-const entryId = locale === "en" ? "call-to-action" : `${locale}/call-to-action`;
-const cta = await getEntry("ctaSection", entryId);
+// Fixed the syntax error in the locale pathing logic
+const ctaId = locale === "en" ? "call-to-action" : `${locale}/call-to-action`;
+const cta = await getEntry("ctaSection", ctaId);
 
 const { title, description, enable, fill_button, outline_button } = cta?.data ?? {};
 
-// Set a safe fallback path (Home) instead of the obsolete overview page
-const safeFallback = "/";
+// Safe fallback to home since Overview is obsolete
+const safePath = "/getting-started/navigation";
 ---
 
 {
   enable && (
     <div class="cta-wrapper">
       <Section title={title} description={description}>
-        <div class="cta-buttons">
+        <div class="button-container">
           {fill_button?.enable && (
             <Button
               label={fill_button.label || "Get Started"}
-              link={fill_button.link || safeFallback}
+              link={fill_button.link || "/"}
               variant="primary"
             />
           )}
           {outline_button?.enable && (
             <Button
               label={outline_button.label || "View Docs"}
-              link={outline_button.link || safeFallback}
+              link={outline_button.link || safePath}
               variant="outline-primary"
             />
           )}
@@ -41,19 +41,18 @@ const safeFallback = "/";
 }
 
 <style>
-  /* Container Layout */
-  .cta-wrapper {
-    padding: 2rem 1rem;
-    width: 100%;
-  }
-
-  /* Centering the buttons via CSS (Replaces the old <script> logic) */
-  .cta-buttons {
+  /* Using CSS for layout instead of Script tags prevents freezes and flickering */
+  .button-container {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     gap: 1rem;
-    margin-top: 1.5rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .cta-wrapper {
+    width: 100%;
+    padding: 1rem;
   }
 
   /* Light mode styling */
@@ -64,10 +63,9 @@ const safeFallback = "/";
 
   /* Dark mode styling */
   :global([data-theme="dark"]) .cta-wrapper {
-    /* Ensure cta-bg.png is in your /public folder for this path to work */
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("/cta-bg.png") no-repeat center;
+    /* Ensure cta-bg.png is moved to your /public folder */
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("/cta-bg.png") no-repeat center;
     background-size: cover;
-    position: relative;
-    border-radius: 0.5rem;
+    border-radius: 0.75rem;
   }
 </style>
