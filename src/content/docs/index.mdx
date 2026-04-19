@@ -1,36 +1,44 @@
 ---
-title: Dockit Build Documentation with Modern UI
-description: Get started building your docs site with DocKit.
+title: BooMBox | Advanced AI Forensics & Grading
+description: The ultimate toolkit for AI-driven trading card forensics and high-fidelity grading.
 template: splash
 hero:
   title: |
-    Great <span data-icon-path='hero-icon.svg'></span> docs
-    <span class="light-text">developers love</span>
-  tagline: Discover tips, resources, and guidance to maximize experience with DocKit.
+    The <span class="text-amber-400">BooM!</span> Box
+    <span class="light-text">AI Forensics & Grading</span>
+  tagline: Professional-grade analysis, automated card authentication, and lightning-fast digital grading.
+  image:
+    file: ../../assets/BooMBox-title.jpg
+  actions:
+    - text: Launch Forensics
+      link: /getting-started/introduction/overview/
+      icon: right-arrow
+      variant: primary
+    - text: View Sample Reports
+      link: /contents/components/using-components/
+      icon: external
 ---
 
 import Section from "~/components/Section.astro";
 import Card from "~/components/user-components/NewCard.astro";
 import Grid from "~/components/user-components/Grid.astro";
 
-<Section title="Powerful features
-<span class='light-text'>for documentations</span>" description="Explore the tools and design choices that make documentation efficient.">
+<Section title="The Gold Standard
+<span class='light-text'>in AI Card Analysis</span>" description="Proprietary neural networks designed specifically for high-value collectibles.">
 
 <Grid columns={4}>
-  <Card title="Well organized" icon="substack" iconColor="#FF8585">
-    The transparency of our data will help you make the informed decisions you need to.
+  <Card title="AI Powered" icon="rocket" iconColor="#FFD97B">
+    Our "Nano Banana" engine detects surface micro-scratches invisible to the naked eye.
   </Card>
-  <Card title="Lightning fast" icon="seti:vite" iconColor="#7BE1A4">
-  Our performance optimization ensures quick load times and a smooth user experience.
+  <Card title="Lightning Fast" icon="seti:vite" iconColor="#7BE1A4">
+    Process 4K high-resolution scans and generate forensic reports in under 3 seconds.
   </Card>
-
-<Card title="Powerful search" icon="seti:code-search" iconColor="#FFD97B">
-  Our search functionality helps users find information quickly and easily.
-</Card>
-<Card title="Very customized" icon="seti:config" iconColor="#979BFF">
-  Tailor the documentation to fit your brand and project needs with ease.
-</Card>
-
+  <Card title="Tamper Proof" icon="seti:lock" iconColor="#FF8585">
+    Every report is anchored to the blockchain to ensure your card's data is never altered.
+  </Card>
+  <Card title="Fully Custom" icon="seti:config" iconColor="#979BFF">
+    Tailor your grading scales and report branding to fit your auction house or shop.
+  </Card>
 </Grid>
 </Section>
 
@@ -38,30 +46,30 @@ import HeroTabs from "~/components/HeroTabs.astro";
 import HeroTabsItem from "~/components/HeroTabsItem.astro";
 
 <Section
-  title="Get started quickly <span class='light-text'>in just 3 simple steps</span>"
-  description="A fast and frustration-free way to set up and start your documentation."
+  title="Analyze your collection <span class='light-text'>in 3 simple steps</span>"
+  description="From raw card to certified forensic report in minutes."
 >
   <HeroTabs>
     <HeroTabsItem
-      title="Install our template"
-      subtitle="Set up in seconds with our template ."
+      title="Scan Your Asset"
+      subtitle="Upload a high-res photo or 300DPI scan of your card."
       number={1}
-      image="/src/assets/step-1.png"
-      imageAlt="Step 1 image"
+      image="/src/assets/screenshot-intake.png" 
+      imageAlt="Step 1: Scanning"
     />
     <HeroTabsItem
-      title="Import what you need"
-      subtitle="Bring components or functions into projecs."
+      title="AI Processing"
+      subtitle="Our AI Forensics engine analyzes centering, edges, and corners."
       number={2}
       image="/src/assets/step-2.png"
-      imageAlt="Step 2 image"
+      imageAlt="Step 2: Processing"
     />
     <HeroTabsItem
-      title="Start documentation"
-      subtitle="Start documenting your project immediately."
+      title="Generate Report"
+      subtitle="Receive a certified BooMBox digital grade and PDF report."
       number={3}
       image="/src/assets/step-3.png"
-      imageAlt="Step 3 image"
+      imageAlt="Step 3: Documentation"
     />
   </HeroTabs>
 </Section>
@@ -69,196 +77,51 @@ import HeroTabsItem from "~/components/HeroTabsItem.astro";
 import ListCard from "~/components/user-components/ListCard.astro";
 import LinkButton from "~/components/LinkButton.astro";
 
-<Section title="Feature topics for <span class='light-text'>our documentation</span>" description="Explore our featured topics and get an idea of our capabilities.">
+<Section title="Explore the <span class='light-text'>Forensics Lab</span>" description="Deep dive into our technology and documentation.">
 
 <Grid columns={3}>
-<ListCard title="UI Components" imageIcon="/src/assets/element.svg" number="15">
-- [Buttons & Links](/contents/components/using-components/)
-- [Navigation Menus](/contents/components/using-components/)
-- [Cards & Panels](/contents/components/using-components/)
-- [Tabs & Accordions](/contents/components/using-components/)
-- [Forms & Inputs](/contents/components/using-components/)
-- [Tables & Lists](/contents/components/using-components/)
+<ListCard title="Grading Logic" imageIcon="/src/assets/element.svg" number="10">
+- [Surface Analysis](/contents/components/using-components/)
+- [Centering Ratios](/contents/components/using-components/)
+- [Edge Detection](/contents/components/using-components/)
+- [Corner Radius Calculation](/contents/components/using-components/)
+- [Sub-grade Weighting](/contents/components/using-components/)
 
-<LinkButton href="/contents/components/using-components/" variant="text" className="mt-6 mb-8 ml-4">View all components</LinkButton>
+<LinkButton href="/contents/components/using-components/" variant="text" className="mt-6 mb-8 ml-4">View Grading Specs</LinkButton>
 </ListCard>
 
-<ListCard title="Content Writing" imageIcon="/src/assets/content.svg" number="18">
-- Markdown Basics
-- MDX Components
-- Code Examples
-- API Documentation
-- Tutorial Writing
-- Best Practices
+<ListCard title="API Integration" imageIcon="/src/assets/code-block.svg" number="12">
+- Webhook Setup
+- JSON Response Schema
+- High-Res Image Uploads
+- Rate Limiting
+- Auth Tokens
 
-<LinkButton href="/contents/editing/add-new-doc/" variant="text" className="mt-6 mb-8 ml-4">View writing guide</LinkButton>
+<LinkButton href="/contents/editing/add-new-doc/" variant="text" className="mt-6 mb-8 ml-4">View API Docs</LinkButton>
 </ListCard>
 
-<ListCard title="Page Layouts" imageIcon="/src/assets/layouts.svg" number="8">
-- Homepage Templates
-- Documentation Pages
-- API Reference Layout
-- Tutorial Structure
-- Landing Pages
-- Error Pages
+<ListCard title="Sample Scans" imageIcon="/src/assets/layouts.svg" number="5">
+- Modern Pokémon
+- Vintage Baseball
+- TCG/Magic
+- Sports Memorabilia
+- Error Cards
 
-<LinkButton href="/getting-started/introduction/overview/" variant="text" className="mt-6 mb-8 ml-4">View layouts</LinkButton>
+<LinkButton href="/getting-started/introduction/overview/" variant="text" className="mt-6 mb-8 ml-4">View Gallery</LinkButton>
 </ListCard>
 </Grid>
-
-<Grid columns={3}>
-
-<ListCard title="Code Syntax" imageIcon="/src/assets/code-block.svg" number="10" image="/src/assets/code-image.png">
-
-- Syntax Highlighting
-- Line Numbers
-- Copy Button
-- Language Labels
-- Diff Highlighting
-- File Names
-
-<LinkButton
-  href="/getting-started/introduction/overview/"
-  variant="text"
-  className="mt-6 mb-8 ml-4"
->
-  View code guide
-</LinkButton>
-
-</ListCard>
-
-<ListCard title="Version History" imageIcon="/src/assets/changelogs.svg" number="25">
-
-- Release Notes
-- Feature Updates
-- Bug Fixes
-- Breaking Changes
-- Migration Guides
-- Deprecated Features
-
-<LinkButton
-  href="/getting-started/introduction/overview/"
-  variant="text"
-  className="mt-6 mb-8 ml-4"
->
-  View changelog
-</LinkButton>
-
-</ListCard>
-
-</Grid>
- 
 </Section>
-
-
 
 import ThemeDemo from "~/components/ThemeDemo.astro";
 
 <Section
-  title="Switch easily from <span class='light-text'>dark/light mode</span>"
-  description="Dedicated toggle button to switch between dark and light mode."
+  title="Precision Viewing in <span class='light-text'>any environment</span>"
+  description="Switch to Dark Mode for high-contrast forensic scan viewing."
 >
 
 <ThemeDemo
-  darkImage="/src/assets/darkmode-demo.png"
+  darkImage="/src/assets/screenshot-scan.png"
   lightImage="/src/assets/lightmode-demo.png"
 />
-
-</Section>
-
-import AccordionContainer from "~/components/AccordionContainer.astro";
-import Accordion from "~/components/Accordion.astro";
-
-<Section
-  title="Have question? <span class='light-text'>We’re here to help</span>"
-  description="Get answers to the general questions people have asked."
->
-
-<AccordionContainer tabList={
-  [
-    {
-      type: 'basic',
-      title: 'Getting Started',
-      subtitle:'Some questions about how to start.',
-      icon: "rocket"
-
-    },
-    {
-      type: 'setting',
-      title: 'Settings & Configurations',
-      subtitle:'How to configure our documentation.',
-      icon: "settings"
-
-    },
-    {
-      type: 'help',
-      title: 'Help & Support',
-      subtitle:'What type of support we provide.',
-      icon: "support"
-
-    }
-
-]
-}>
-
-<Accordion
-  question="How do I get started with Dockit?"
-  answer="Simply install our template, import the components you need, and start documenting your project. The setup process takes just a few minutes."
-  type="basic"
-/>
-<Accordion
-  question="What are the system requirements?"
-  answer="Dockit requires Node.js 18+ and works with any modern web browser. It's built on Astro and supports all major operating systems."
-  type="basic"
-/>
-<Accordion
-  question="Is Dockit free to use?"
-  answer="Yes, Dockit is completely free and open source. You can use it for personal and commercial projects without any limitations."
-  type="basic"
-/>
-<Accordion
-  question="Can I customize the design?"
-  answer="Absolutely! Dockit is highly customizable with Tailwind CSS. You can modify colors, layouts, components, and add your own branding."
-  type="basic"
-/>
-
-<Accordion
-  question="How do I change the theme colors?"
-  answer="You can customize theme colors by modifying the CSS custom properties in your theme configuration file or through the Tailwind config."
-  type="setting"
-/>
-<Accordion
-  question="Can I add custom components?"
-  answer="Yes, you can create and add custom Astro components. Simply place them in the components folder and import them where needed."
-  type="setting"
-/>
-<Accordion
-  question="How do I configure navigation?"
-  answer="Navigation is configured through the menu.json file in your config folder. You can add, remove, or reorder menu items as needed."
-  type="setting"
-/>
-<Accordion
-  question="Can I use my own domain?"
-  answer="Yes, you can deploy Dockit to any hosting service and use your custom domain. We provide deployment guides for popular platforms."
-  type="setting"
-/>
-
-<Accordion
-  question="Where can I get help?"
-  answer="You can get help through our GitHub discussions, documentation, or community Discord server. We also provide email support for complex issues."
-  type="help"
-/>
-<Accordion
-  question="How do I report bugs?"
-  answer="Please report bugs through our GitHub issues page with detailed information about the problem and steps to reproduce it."
-  type="help"
-/>
-<Accordion
-  question="Do you offer premium support?"
-  answer="While Dockit is free, we offer premium consulting services for custom implementations and enterprise deployments."
-  type="help"
-/>
-
-</AccordionContainer>
 
 </Section>
