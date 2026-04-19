@@ -1,7 +1,11 @@
 ---
 import { AstroFont } from "astro-font";
+import { inject } from "@vercel/analytics";
 import theme from "@/config/theme.json";
 const { head } = Astro.locals.starlightRoute;
+
+// Initialize Vercel Web Analytics
+inject();
 
 // font families
 const pf = theme.fonts.font_family.primary;
