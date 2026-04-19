@@ -1,5 +1,6 @@
 ---
 import { AstroFont } from "astro-font";
+import SpeedInsights from "@vercel/speed-insights/astro";
 import theme from "@/config/theme.json";
 const { head } = Astro.locals.starlightRoute;
 
@@ -50,3 +51,5 @@ if (theme.fonts.font_family.secondary) {
       ]}
     />
 
+<!-- Vercel Speed Insights -->
+<SpeedInsights />
