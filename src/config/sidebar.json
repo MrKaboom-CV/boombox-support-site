@@ -3,21 +3,21 @@
     {
       "label": "Customer Support",
       "items": [
-        { "label": "Contact Us", "slug": "support/contact" },
-        { "label": "App Features", "slug": "support/features" }
+        { "label": "[email] Contact Us", "slug": "support/contact" },
+        { "label": "[star] App Features", "slug": "support/features" }
       ]
     },
     {
       "label": "Release Notes",
       "items": [
-        { "label": "App Updates", "slug": "updates/latest" }
+        { "label": "[rocket] App Updates", "slug": "updates/latest" }
       ]
     },
     {
       "label": "Legal Vault",
       "items": [
-        { "label": "Privacy Policy", "slug": "legal/privacy" },
-        { "label": "Terms of Service", "slug": "legal/terms" }
+        { "label": "[document] Privacy Policy", "slug": "legal/privacy" },
+        { "label": "[seti:config] Terms of Service", "slug": "legal/terms" }
       ]
     }
   ]
