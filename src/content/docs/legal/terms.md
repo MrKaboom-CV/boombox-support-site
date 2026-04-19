@@ -1,9 +1,9 @@
 ---
 title: Terms of Service
-description: Usage terms for BooMBox Card Vault.
+description: Usage terms for BooMBox Card Vault
 ---
 
-## Terms and Conditions
-Welcome to the BooMBox. By using this app, you agree to our forensic standards. 
+## Terms of Service
+By using the BooMBox Lab, you agree to our digital forensic standards.
 
-*(You can add your full legal text here later!)*
+Full details coming soon.
