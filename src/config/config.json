@@ -2,20 +2,16 @@
   "site": {
     "title": "BooMBox Card Vault",
     "description": "AI Forensic Collectible Card Vault & Market Tracker",
-    "logo": "./src/assets/boombox-logo-main.jpg", 
-    "logo_darkmode": "./src/assets/boombox-logo-main.jpg",
-    "logo_width": "160", 
+    "logo": "./src/assets/image_946861.jpg",
+    "logo_darkmode": "./src/assets/image_946861.jpg",
+    "logo_width": "160",
     "logo_height": "40",
     "logo_text": "BooMBox"
-  }
-}
-
-
+  },
   "settings": {
     "search": true,
     "theme_switcher": true
   },
-
   "params": {
     "footer_contact": {
       "enable": true,
@@ -23,7 +19,6 @@
     },
     "copyright": "© 2026 BooMBox. Designed and Developed by MrKaboom"
   },
-
   "navigation_button": {
     "enable": true,
     "label": "Launch Lab",
