@@ -14,20 +14,25 @@ import { fileURLToPath } from "url";
 const { site } = config;
 const { title, logo, logo_darkmode } = site;
 
+// The locales are exported for use in other files if needed
 export const locales = locals;
 
 // https://astro.build/config
 export default defineConfig({
+  // FIX: This property is required for absolute URLs and sitemaps
+  site: "https://boomboxcv.com",
+
   // Note: 'noop' service disables Astro's image optimization. 
   // If you want Astro to handle image resizing, change this to 'sharp' later.
   image: {
     service: { entrypoint: "astro/assets/services/noop" },
   },
+
   integrations: [
     starlight({
       title,
       logo: {
-        // Ensure site.logo in config.json is "bannerless-bg-BooMBox.png"
+        // Ensure site.logo in config.json is "bannerless-bg-BooMBox.png" or similar path
         light: logo,
         dark: logo_darkmode,
         alt: "BooMBox Logo",
@@ -36,8 +41,9 @@ export default defineConfig({
       social: social.main || [],
       locales,
       sidebar: sidebar.main || [],
-      // Pointing to your existing global.css
+      // Pointing to your custom global CSS
       customCss: ["./src/styles/global.css"],
+      // Component overrides for the BooMBox custom UI
       components: {
         Head: "./src/components/override-components/Head.astro",
         Header: "./src/components/override-components/Header.astro",
@@ -51,8 +57,9 @@ export default defineConfig({
       },
     }),
   ],
+
   vite: {
-    plugins: /** @type {any} */ ([tailwindcss(), viewTransitions()]),
+    plugins: [tailwindcss(), viewTransitions()],
     resolve: {
       alias: {
         "@": fileURLToPath(new URL("./src", import.meta.url)),
