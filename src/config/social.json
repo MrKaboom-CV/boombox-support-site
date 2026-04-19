@@ -3,17 +3,17 @@
     {
       "icon": "facebook",
       "label": "Facebook",
-      "href": "https://www.facebook.com/your-boombox-page"
+      "href": "https://www.facebook.com/BooMBoxCardVault"
     },
     {
       "icon": "instagram",
       "label": "Instagram",
-      "href": "https://www.instagram.com/your-boombox-handle"
+      "href": "https://www.instagram.com/BooMBoxVault"
     },
     {
-      "icon": "x",
+      "icon": "x.com",
       "label": "Twitter / X",
-      "href": "https://twitter.com/your-boombox-handle"
+      "href": "https://x.com/BooMBoxVault"
     }
   ]
 }
