@@ -1,6 +1,6 @@
 /* Global Background Setup */
 body {
-  background-image: url('/src/assets/bannerless-bg-BooMBox.png');
+  background-image: url('/src/assets/BooMBox-title.png');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
