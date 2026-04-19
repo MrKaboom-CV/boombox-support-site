@@ -25,9 +25,10 @@ export default defineConfig({
   // to prevent 404s on sub-pages.
   trailingSlash: 'always',
 
-  image: {
-    service: { entrypoint: "astro/assets/services/noop" },
-  },
+ // astro.config.mjs
+image: {
+  service: { entrypoint: "astro/assets/services/sharp" },
+},
 
   integrations: [
     starlight({
