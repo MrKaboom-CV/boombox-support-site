@@ -5,14 +5,14 @@ import Section from "./Section.astro";
 
 const locale = Astro.currentLocale || "en";
 
-// Fixed the syntax error in the locale pathing logic
+// Correct pathing for the content entry
 const ctaId = locale === "en" ? "call-to-action" : `${locale}/call-to-action`;
 const cta = await getEntry("ctaSection", ctaId);
 
 const { title, description, enable, fill_button, outline_button } = cta?.data ?? {};
 
-// Safe fallback to home since Overview is obsolete
-const safePath = "/getting-started/navigation";
+// FIXED: Point to a path that actually exists!
+const safePath = "/reference/configuration"; 
 ---
 
 {
@@ -41,7 +41,6 @@ const safePath = "/getting-started/navigation";
 }
 
 <style>
-  /* Using CSS for layout instead of Script tags prevents freezes and flickering */
   .button-container {
     display: flex;
     justify-content: center;
@@ -49,21 +48,14 @@ const safePath = "/getting-started/navigation";
     margin-top: 2rem;
     flex-wrap: wrap;
   }
-
   .cta-wrapper {
     width: 100%;
     padding: 1rem;
   }
-
-  /* Light mode styling */
   :global([data-theme="light"]) .cta-wrapper {
     background-color: #f9fafb;
-    background-blend-mode: multiply;
   }
-
-  /* Dark mode styling */
   :global([data-theme="dark"]) .cta-wrapper {
-    /* Ensure cta-bg.png is moved to your /public folder */
     background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("/cta-bg.png") no-repeat center;
     background-size: cover;
     border-radius: 0.75rem;
