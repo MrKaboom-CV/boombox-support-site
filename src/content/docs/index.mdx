@@ -8,8 +8,6 @@ hero:
     <span class="light-text">AI Forensics & Grading</span>
   tagline: Professional-grade analysis, automated card authentication, and lightning-fast digital grading.
   image:
-    # 1. FIXED: Pointing to the actual file name you provided
-    # 2. FIXED: Using relative path (../../) instead of absolute (/src)
     file: ../../assets/bannerless-bg-BooMBox.png
   actions:
     - text: Launch Forensics
@@ -56,7 +54,6 @@ import HeroTabsItem from "~/components/HeroTabsItem.astro";
       title="Scan Your Asset"
       subtitle="Upload a high-res photo or 300DPI scan of your card."
       number={1}
-      # Make sure this image exists in src/assets/ or remove this line
       image="../../assets/screenshot-intake.PNG" 
       imageAlt="Step 1: Scanning"
     />
@@ -64,7 +61,6 @@ import HeroTabsItem from "~/components/HeroTabsItem.astro";
       title="AI Processing"
       subtitle="Our AI Forensics engine analyzes centering, edges, and corners."
       number={2}
-      # Removing broken placeholder paths to ensure build passes
     />
     <HeroTabsItem
       title="Generate Report"
@@ -81,7 +77,6 @@ import ThemeDemo from "~/components/ThemeDemo.astro";
   description="Switch to Dark Mode for high-contrast forensic scan viewing."
 >
 
-{/* If screenshot-scan.PNG exists, keep this. If not, delete this component block */}
 <ThemeDemo
   darkImage="../../assets/screenshot-scan.PNG"
   lightImage="../../assets/lightmode-demo.png"
