@@ -3,61 +3,28 @@ import { getEntry } from "astro:content";
 import Button from "./user-components/Button.astro";
 import Section from "./Section.astro";
 
-const locale = Astro.currentLocale || "en";
-
-// Correct pathing for the content entry
-const ctaId = locale === "en" ? "call-to-action" : `${locale}/call-to-action`;
-const cta = await getEntry("ctaSection", ctaId);
-
+const cta = await getEntry("ctaSection", "call-to-action");
 const { title, description, enable, fill_button, outline_button } = cta?.data ?? {};
-
-// FIXED: Point to a path that actually exists!
-const safePath = "/reference/configuration"; 
 ---
 
-{
-  enable && (
-    <div class="cta-wrapper">
-      <Section title={title} description={description}>
-        <div class="button-container">
-          {fill_button?.enable && (
-            <Button
-              label={fill_button.label || "Get Started"}
-              link={fill_button.link || "/"}
-              variant="primary"
-            />
-          )}
-          {outline_button?.enable && (
-            <Button
-              label={outline_button.label || "View Docs"}
-              link={outline_button.link || safePath}
-              variant="outline-primary"
-            />
-          )}
-        </div>
-      </Section>
-    </div>
-  )
-}
+{enable && (
+  <div class="cta-wrapper py-20">
+    <Section title={title} description={description}>
+      <div class="flex justify-center gap-4 mt-8">
+        {fill_button?.enable && (
+          <Button label={fill_button.label} link="/configurations" variant="primary" />
+        )}
+        {outline_button?.enable && (
+          <Button label={outline_button.label} link="/support" variant="outline-primary" />
+        )}
+      </div>
+    </Section>
+  </div>
+)}
 
 <style>
-  .button-container {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-top: 2rem;
-    flex-wrap: wrap;
-  }
-  .cta-wrapper {
-    width: 100%;
-    padding: 1rem;
-  }
-  :global([data-theme="light"]) .cta-wrapper {
-    background-color: #f9fafb;
-  }
   :global([data-theme="dark"]) .cta-wrapper {
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("/cta-bg.png") no-repeat center;
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url("/cta-bg.png") no-repeat center;
     background-size: cover;
-    border-radius: 0.75rem;
   }
 </style>

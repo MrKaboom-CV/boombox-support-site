@@ -6,68 +6,24 @@
     },
     {
       "name": "Documentation",
-      "url": "/reference/configuration"
+      "url": "/configurations"
     },
     {
-      "name": "Reference",
-      "url": "",
-      "hasChildren": true,
-      "children": [
-        {
-          "name": "Configuration",
-          "url": "/reference/configuration"
-        },
-        {
-          "name": "Plugins Reference",
-          "url": "/reference/plugin"
-        }
-      ]
+      "name": "Support",
+      "url": "/support"
     }
   ],
   "footer": {
-    "community": {
-      "title": "Join Our Community",
-      "links": [
-        {
-          "name": "GitHub Discussions",
-          "url": "https://github.com/themefisher/dockit/discussions"
-        },
-        {
-          "name": "Discord Community",
-          "url": "/"
-        },
-        {
-          "name": "Twitter Updates",
-          "url": "/"
-        },
-        {
-          "name": "Contributing Guide",
-          "url": "/"
-        }
-      ]
-    },
     "help_links": {
-      "title": "Helpful Links",
+      "title": "Legal Lab",
       "links": [
-        {
-          "name": "Getting Started",
-          "url": "/reference/configuration"
-        },
         {
           "name": "Privacy Policy",
           "url": "/privacy-policy"
         },
         {
-          "name": "Terms and Conditions",
+          "name": "Terms",
           "url": "/terms-conditions"
-        },
-        {
-          "name": "About Us",
-          "url": "/about"
-        },
-        {
-          "name": "Troubleshooting",
-          "url": "/"
         }
       ]
     },
@@ -75,8 +31,8 @@
       "title": "Resources",
       "links": [
         {
-          "name": "Documentation Hub",
-          "url": "/reference/configuration"
+          "name": "About Us",
+          "url": "/about"
         }
       ]
     }
