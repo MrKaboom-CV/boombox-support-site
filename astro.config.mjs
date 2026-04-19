@@ -14,11 +14,12 @@ import { fileURLToPath } from "url";
 const { site } = config;
 const { title, logo, logo_darkmode } = site;
 
-export const locales = locals
-
+export const locales = locals;
 
 // https://astro.build/config
 export default defineConfig({
+  // Note: 'noop' service disables Astro's image optimization. 
+  // If you want Astro to handle image resizing, change this to 'sharp' later.
   image: {
     service: { entrypoint: "astro/assets/services/noop" },
   },
@@ -26,14 +27,16 @@ export default defineConfig({
     starlight({
       title,
       logo: {
+        // Ensure site.logo in config.json is "bannerless-bg-BooMBox.png"
         light: logo,
         dark: logo_darkmode,
-        alt: "DocKit Logo",
+        alt: "BooMBox Logo",
       },
       // @ts-ignore
       social: social.main || [],
       locales,
       sidebar: sidebar.main || [],
+      // Pointing to your existing global.css
       customCss: ["./src/styles/global.css"],
       components: {
         Head: "./src/components/override-components/Head.astro",
@@ -45,10 +48,7 @@ export default defineConfig({
         ContentPanel: "./src/components/override-components/ContentPanel.astro",
         Pagination: "./src/components/override-components/Pagination.astro",
         Sidebar: "./src/components/override-components/Sidebar.astro",
-        
-        
       },
-      
     }),
   ],
   vite: {

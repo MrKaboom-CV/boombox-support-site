@@ -1,31 +1,29 @@
 {
   "site": {
-    "title": "DocKit",
-    "logo": "/src/assets/logo-light.svg",
-    "logo_darkmode": "/src/assets/logo-dark.svg",
-    "logo_width": "127",
-    "logo_height": "32",
-    "logo_text": "DocKit"
+    "title": "BooMBox Card Vault",
+    "description": "AI Forensic Collectible Card Vault & Market Tracker",
+    "logo": "./src/assets/Boombox_logo.png",
+    "logo_darkmode": "./src/assets/Boombox_logo.png",
+    "logo_width": "160",
+    "logo_height": "40",
+    "logo_text": "BooMBox"
   },
-
   "settings": {
     "search": true,
     "theme_switcher": true
   },
-
   "params": {
     "footer_contact": {
       "enable": true,
-      "action": "#"
+      "action": "/contact/"
     },
-    "copyright": "Designed and Developed by <a class=\"text-primary hover:underline no-underline\" href=\"https://themefisher.com\" target=\"_blank\" rel=\"noopener\" aria-label=\"Themefisher\">Themefisher</a> Copyright &copy; 2025."
+    "copyright": "© 2026 BooMBox. Designed and Developed by MrKaboom"
   },
-
   "navigation_button": {
     "enable": true,
-    "label": "Get Started",
+    "label": "Launch Lab",
     "translations": {
-      "fr": "Erste Schritte"
+      "fr": "Lancer le Labo"
     },
     "link": "/getting-started/introduction/overview/"
   }

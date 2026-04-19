@@ -8,119 +8,110 @@
 @plugin "../tailwind-plugin/tw-bs-grid";
 
 :root {
-  --sl-color-accent-low: color-mix(in srgb, var(--color-primary), #000 90%);
-  --sl-color-accent: #ffb000; /* Your Vault Gold */
-  --sl-color-accent-high: color-mix(in srgb, var(--color-primary), #fff 70%);
+  /* --- BooMBox Base Palette --- */
+  --color-gold: #fbbf24;       
+  --color-neon: #00ff9c;       
+  --color-dark: #050505;       
 
-  --sl-color-white: var(--color-light);
-  --sl-color-gray-1: color-mix(
-    in srgb,
-    var(--color-dark) 6%,
-    var(--color-light) 94%
-  ); /* #eeeeee */
-  --sl-color-gray-2: color-mix(
-    in srgb,
-    var(--color-dark) 24%,
-    var(--color-light) 76%
-  ); /* #c2c2c2 */
-  --sl-color-gray-3: color-mix(
-    in srgb,
-    var(--color-dark) 45%,
-    var(--color-light) 55%
-  ); /* #8b8b8b */
-  --sl-color-gray-4: color-mix(
-    in srgb,
-    var(--color-dark) 65%,
-    var(--color-light) 35%
-  ); /* #585858 */
-  --sl-color-gray-5: color-mix(
-    in srgb,
-    var(--color-dark) 78%,
-    var(--color-light) 22%
-  ); /* #383838 */
-  --sl-color-gray-6: color-mix(
-    in srgb,
-    var(--color-dark) 85%,
-    var(--color-light) 15%
-  ); /* #272727 */
-
-  /* color-dark: #040404 */
+  /* Starlight Core Overrides */
+  --sl-color-accent: var(--color-neon);
+  --sl-color-accent-low: #003320;
+  --sl-color-accent-high: var(--color-gold);
+  --sl-color-white: var(--color-gold);
+  --sl-color-gray-1: var(--color-neon); 
+  --sl-color-gray-2: color-mix(in srgb, var(--color-neon) 80%, transparent);
+  --sl-color-gray-3: color-mix(in srgb, var(--color-neon) 60%, transparent);
+  --sl-color-gray-4: color-mix(in srgb, var(--color-neon) 40%, transparent);
+  --sl-color-gray-5: #1a1a1a;
+  --sl-color-gray-6: #111111;
   --sl-color-black: var(--color-dark);
   --sl-sidebar-width: 320px;
-  --sl-color-hairline: color-mix(
-    in srgb,
-    var(--sl-color-white) 10%,
-    transparent
-  );
-  --sl-color-hairline-light:#252525;
+  --sl-color-hairline: color-mix(in srgb, var(--color-neon) 20%, transparent);
+  --sl-color-hairline-light: #1a4d3a;
+
+  /* FIX: Starlight layers must be transparent to see the image below */
+  --sl-color-bg: transparent !important;
 }
 
-/* Light mode colors. */
+/* Force consistency in Light Mode */
 :root[data-theme="light"] {
-  --sl-color-accent-low: color-mix(
-    in srgb,
-    var(--color-lightmode-primary),
-    #fff 70%
-  );
-  --sl-color-accent: var(--color-lightmode-primary);
-  --sl-color-accent-high: color-mix(
-    in srgb,
-    var(--color-lightmode-primary),
-    #000 90%
-  );
-  /* color-lightmode-light: #181818 */
-  --sl-color-white: var(--color-lightmode-light);
-  --sl-color-gray-1: color-mix(
-    in srgb,
-    var(--color-lightmode-dark) 15%,
-    var(--color-lightmode-light) 85%
-  ); /* #272727 */
-  --sl-color-gray-2: color-mix(
-    in srgb,
-    var(--color-lightmode-dark) 22%,
-    var(--color-lightmode-light) 78%
-  ); /* #383838 */
-  --sl-color-gray-3: color-mix(
-    in srgb,
-    var(--color-lightmode-dark) 35%,
-    var(--color-lightmode-light) 65%
-  ); /* #585858 */
-  --sl-color-gray-4: color-mix(
-    in srgb,
-    var(--color-lightmode-dark) 55%,
-    var(--color-lightmode-light) 45%
-  ); /* #8b8b8b */
-  --sl-color-gray-5: color-mix(
-    in srgb,
-    var(--color-lightmode-dark) 76%,
-    var(--color-lightmode-light) 24%
-  ); /* #c2c2c2 */
-  --sl-color-gray-6: color-mix(
-    in srgb,
-    var(--color-lightmode-dark) 94%,
-    var(--color-lightmode-light) 6%
-  ); /* #eeeeee */
-  --sl-color-gray-7: color-mix(
-    in srgb,
-    var(--color-lightmode-dark) 96%,
-    var(--color-lightmode-light) 4%
-  ); /* #f6f6f6 */
-
-
-  --sl-color-black: var(--color-lightmode-dark);
+  --sl-color-bg: transparent !important;
+  --sl-color-white: #000;
 }
 
 @theme {
   --color-primary-gradient: linear-gradient(
     35.65deg,
-    #3a1c71 -10.94%,
-    var(--color-primary) 61.04%,
-    #ffca7b 133.01%
+    #050505 -10.94%,
+    var(--color-neon) 61.04%,
+    var(--color-gold) 133.01%
   );
+}
+
+/* --- Background Image & Layering --- */
+
+body {
+  color: var(--color-gold);
+  
+  /* Applying Background with a 45% dark tint to act as a "shadow-box" for the glow */
+  background: 
+    linear-gradient(rgba(5, 5, 5, 0.45), rgba(5, 5, 5, 0.45)), 
+    url('../assets/Boombox_logo02.PNG') !important;
+  
+  background-size: cover !important;
+  background-attachment: fixed !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-color: var(--color-dark) !important;
+}
+
+/* Clear all containers that might block the body background */
+.page, .main-frame, .content-panel, .sl-container, main, .hero-bg {
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+/* --- THE UNIQUE INVERSE GLOW --- */
+
+/* 1. NEON GOLD TEXT with NEON GREEN OUTLINE (Headings) */
+h1, h2, h3, h4, h5, .section-title {
+  color: var(--color-gold) !important;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-shadow: 
+    1px 1px 0px #000,                 /* Sharp black edge for clarity */
+    -1px -1px 0px #000,               /* Sharp black edge */
+    0 0 8px rgba(0, 255, 156, 0.8),    /* Strong NEON GREEN plasma */
+    0 0 16px rgba(0, 255, 156, 0.4) !important; /* Wide GREEN aura */
+}
+
+/* 2. NEON GREEN TEXT with NEON GOLD OUTLINE (Body Text) */
+p, li, .section-description, .light-text {
+  color: var(--color-neon) !important;
+  font-weight: 450; 
+  text-shadow: 
+    1px 1px 0px #000,                 /* Sharp black edge for clarity */
+    -1px -1px 0px #000,               /* Sharp black edge */
+    0 0 6px rgba(251, 191, 36, 0.7),   /* Strong NEON GOLD plasma */
+    0 0 12px rgba(251, 191, 36, 0.3) !important; /* Wide GOLD aura */
+}
+
+/* hover effect: making them swap or intensify */
+a:hover {
+  filter: brightness(1.3);
+  transition: all 0.3s ease;
+}
+
+/* --- Glassmorphism Enhancements --- */
+
+.sl-card, .list-body, .hero-tabs-item {
+  background: rgba(0, 0, 0, 0.8) !important; /* Darker cards to make text pop */
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--color-neon) !important;
+  box-shadow: 0 0 25px rgba(0, 255, 156, 0.1);
 }
 
 @import "./base.css";
 @import "./navigation.css";
 @import "./components.css";
 @import "./button.css";
-
