@@ -22,7 +22,6 @@
   --sl-color-white: var(--color-gold);
 
   /* Mapping: Gray Fonts -> Neon Green Variations */
-  /* Using color-mix to maintain the hierarchy while shifting the hue to Neon Green */
   --sl-color-gray-1: var(--color-neon); 
   --sl-color-gray-2: color-mix(in srgb, var(--color-neon) 80%, transparent);
   --sl-color-gray-3: color-mix(in srgb, var(--color-neon) 60%, transparent);
@@ -35,21 +34,21 @@
   
   --sl-color-hairline: color-mix(in srgb, var(--color-neon) 20%, transparent);
   --sl-color-hairline-light: #1a4d3a;
+
+  /* FIX: Starlight's background layer must be transparent to see the image below it */
+  --sl-color-bg: transparent !important;
 }
 
 /* Maintain the "BooMBox" vibe even if the user toggles Light Mode */
 :root[data-theme="light"] {
   --sl-color-accent: var(--color-neon);
-  --sl-color-white: #000000; /* Darker text for readability on light */
+  --sl-color-white: #000000;
   --sl-color-gray-1: #1a1a1a;
   --sl-color-black: #f6f6f6;
-  
-  /* We force the background to remain darkish for the Forensics feel */
-  --sl-color-bg: #e8e8e8; 
+  --sl-color-bg: transparent !important; /* Force transparent in light mode too */
 }
 
 @theme {
-  /* Updated Gradient to be Gold -> Green -> Deep Purple/Black */
   --color-primary-gradient: linear-gradient(
     35.65deg,
     #050505 -10.94%,
@@ -61,15 +60,29 @@
 /* --- Global Overrides & Background --- */
 
 body {
-  /* White to Gold */
   color: var(--color-gold);
   
-  /* Applying your specific background image */
-  background-image: url('../assets/Boombox_logo02.PNG');
-  background-size: cover;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-color: var(--color-dark);
+  /* Apply the background image */
+  /* If this fails, double check if the file is actually .PNG or .jpg */
+  background-image: url('../assets/Boombox_logo02.PNG') !important;
+  background-size: cover !important;
+  background-attachment: fixed !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  
+  /* Fallback color while image loads */
+  background-color: var(--color-dark) !important;
+}
+
+/* FIX: These Starlight containers have solid background colors 
+   that block the body image. We must set them to transparent. 
+*/
+.page, 
+.main-frame, 
+.content-panel, 
+.sl-container, 
+main {
+  background-color: transparent !important;
 }
 
 /* Ensure all headings are Gold */
