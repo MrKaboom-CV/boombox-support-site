@@ -54,21 +54,21 @@ import HeroTabsItem from "~/components/HeroTabsItem.astro";
       title="Scan Your Asset"
       subtitle="Upload a high-res photo or 300DPI scan of your card."
       number={1}
-      image="/src/assets/screenshot-intake.png" 
+      image="../../assets/screenshot-intake.png" 
       imageAlt="Step 1: Scanning"
     />
     <HeroTabsItem
       title="AI Processing"
       subtitle="Our AI Forensics engine analyzes centering, edges, and corners."
       number={2}
-      image="/src/assets/step-2.png"
+      image="../../assets/step-2.png"
       imageAlt="Step 2: Processing"
     />
     <HeroTabsItem
       title="Generate Report"
       subtitle="Receive a certified BooMBox digital grade and PDF report."
       number={3}
-      image="/src/assets/step-3.png"
+      image="../../assets/step-3.png"
       imageAlt="Step 3: Documentation"
     />
   </HeroTabs>
@@ -80,7 +80,7 @@ import LinkButton from "~/components/LinkButton.astro";
 <Section title="Explore the <span class='light-text'>Forensics Lab</span>" description="Deep dive into our technology and documentation.">
 
 <Grid columns={3}>
-<ListCard title="Grading Logic" imageIcon="/src/assets/element.svg" number="10">
+<ListCard title="Grading Logic" imageIcon="../../assets/element.svg" number="10">
 - [Surface Analysis](/contents/components/using-components/)
 - [Centering Ratios](/contents/components/using-components/)
 - [Edge Detection](/contents/components/using-components/)
@@ -90,7 +90,7 @@ import LinkButton from "~/components/LinkButton.astro";
 <LinkButton href="/contents/components/using-components/" variant="text" className="mt-6 mb-8 ml-4">View Grading Specs</LinkButton>
 </ListCard>
 
-<ListCard title="API Integration" imageIcon="/src/assets/code-block.svg" number="12">
+<ListCard title="API Integration" imageIcon="../../assets/code-block.svg" number="12">
 - Webhook Setup
 - JSON Response Schema
 - High-Res Image Uploads
@@ -100,7 +100,7 @@ import LinkButton from "~/components/LinkButton.astro";
 <LinkButton href="/contents/editing/add-new-doc/" variant="text" className="mt-6 mb-8 ml-4">View API Docs</LinkButton>
 </ListCard>
 
-<ListCard title="Sample Scans" imageIcon="/src/assets/layouts.svg" number="5">
+<ListCard title="Sample Scans" imageIcon="../../assets/layouts.svg" number="5">
 - Modern Pokémon
 - Vintage Baseball
 - TCG/Magic
@@ -120,8 +120,8 @@ import ThemeDemo from "~/components/ThemeDemo.astro";
 >
 
 <ThemeDemo
-  darkImage="/src/assets/screenshot-scan.png"
-  lightImage="/src/assets/lightmode-demo.png"
+  darkImage="../../assets/screenshot-scan.png"
+  lightImage="../../assets/lightmode-demo.png"
 />
 
 </Section>
