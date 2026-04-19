@@ -6,14 +6,11 @@ const { className }: { className?: string } = Astro.props;
 
 {theme_switcher && (
   <div class={`theme-switcher ${className || ""}`}>
-    <input id="theme-switcher" data-theme-switcher type="checkbox" class="hidden" />
-    <label for="theme-switcher" class="cursor-pointer">
+    <input id="theme-switcher-input" data-theme-switcher type="checkbox" class="hidden" />
+    <label for="theme-switcher-input" class="cursor-pointer flex items-center justify-center p-2">
       <span class="sr-only">Toggle theme</span>
-      <div class="icon-container flex items-center justify-center p-2">
-        {/* Simple Sun/Moon Icon toggle logic via CSS */}
-        <span class="dark:hidden text-orange-500">☀️</span>
-        <span class="hidden dark:inline text-blue-300">🌙</span>
-      </div>
+      <span class="dark:hidden">☀️</span>
+      <span class="hidden dark:inline">🌙</span>
     </label>
   </div>
 )}
@@ -26,18 +23,17 @@ const { className }: { className?: string } = Astro.props;
   function applyTheme() {
     const switcher = document.querySelector('[data-theme-switcher]') as HTMLInputElement;
     if (!switcher) return;
-
     const savedTheme = localStorage.getItem("starlight-theme") || "dark";
     document.documentElement.dataset.theme = savedTheme;
     switcher.checked = savedTheme === "dark";
 
     switcher.addEventListener("change", (e) => {
-      const newTheme = (e.target as HTMLInputElement).checked ? "dark" : "light";
+      const target = e.target as HTMLInputElement;
+      const newTheme = target.checked ? "dark" : "light";
       document.documentElement.dataset.theme = newTheme;
       localStorage.setItem("starlight-theme", newTheme);
     });
   }
-
   applyTheme();
   document.addEventListener("astro:after-swap", applyTheme);
 </script>
