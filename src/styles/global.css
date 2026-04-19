@@ -8,119 +8,89 @@
 @plugin "../tailwind-plugin/tw-bs-grid";
 
 :root {
-  --sl-color-accent-low: color-mix(in srgb, var(--color-primary), #000 90%);
-  --sl-color-accent: #ffb000; /* Your Vault Gold */
-  --sl-color-accent-high: color-mix(in srgb, var(--color-primary), #fff 70%);
+  /* --- BooMBox Base Palette --- */
+  --color-gold: #fbbf24;       /* Typical Gold */
+  --color-neon: #00ff9c;       /* Typical Neon Green */
+  --color-dark: #050505;       /* Deep Lab Background */
 
-  --sl-color-white: var(--color-light);
-  --sl-color-gray-1: color-mix(
-    in srgb,
-    var(--color-dark) 6%,
-    var(--color-light) 94%
-  ); /* #eeeeee */
-  --sl-color-gray-2: color-mix(
-    in srgb,
-    var(--color-dark) 24%,
-    var(--color-light) 76%
-  ); /* #c2c2c2 */
-  --sl-color-gray-3: color-mix(
-    in srgb,
-    var(--color-dark) 45%,
-    var(--color-light) 55%
-  ); /* #8b8b8b */
-  --sl-color-gray-4: color-mix(
-    in srgb,
-    var(--color-dark) 65%,
-    var(--color-light) 35%
-  ); /* #585858 */
-  --sl-color-gray-5: color-mix(
-    in srgb,
-    var(--color-dark) 78%,
-    var(--color-light) 22%
-  ); /* #383838 */
-  --sl-color-gray-6: color-mix(
-    in srgb,
-    var(--color-dark) 85%,
-    var(--color-light) 15%
-  ); /* #272727 */
+  /* Starlight Core Overrides */
+  --sl-color-accent: var(--color-neon);
+  --sl-color-accent-low: #003320;
+  --sl-color-accent-high: var(--color-gold);
 
-  /* color-dark: #040404 */
+  /* Mapping: White Font -> Gold */
+  --sl-color-white: var(--color-gold);
+
+  /* Mapping: Gray Fonts -> Neon Green Variations */
+  /* Using color-mix to maintain the hierarchy while shifting the hue to Neon Green */
+  --sl-color-gray-1: var(--color-neon); 
+  --sl-color-gray-2: color-mix(in srgb, var(--color-neon) 80%, transparent);
+  --sl-color-gray-3: color-mix(in srgb, var(--color-neon) 60%, transparent);
+  --sl-color-gray-4: color-mix(in srgb, var(--color-neon) 40%, transparent);
+  --sl-color-gray-5: #1a1a1a;
+  --sl-color-gray-6: #111111;
+
   --sl-color-black: var(--color-dark);
   --sl-sidebar-width: 320px;
-  --sl-color-hairline: color-mix(
-    in srgb,
-    var(--sl-color-white) 10%,
-    transparent
-  );
-  --sl-color-hairline-light:#252525;
+  
+  --sl-color-hairline: color-mix(in srgb, var(--color-neon) 20%, transparent);
+  --sl-color-hairline-light: #1a4d3a;
 }
 
-/* Light mode colors. */
+/* Maintain the "BooMBox" vibe even if the user toggles Light Mode */
 :root[data-theme="light"] {
-  --sl-color-accent-low: color-mix(
-    in srgb,
-    var(--color-lightmode-primary),
-    #fff 70%
-  );
-  --sl-color-accent: var(--color-lightmode-primary);
-  --sl-color-accent-high: color-mix(
-    in srgb,
-    var(--color-lightmode-primary),
-    #000 90%
-  );
-  /* color-lightmode-light: #181818 */
-  --sl-color-white: var(--color-lightmode-light);
-  --sl-color-gray-1: color-mix(
-    in srgb,
-    var(--color-lightmode-dark) 15%,
-    var(--color-lightmode-light) 85%
-  ); /* #272727 */
-  --sl-color-gray-2: color-mix(
-    in srgb,
-    var(--color-lightmode-dark) 22%,
-    var(--color-lightmode-light) 78%
-  ); /* #383838 */
-  --sl-color-gray-3: color-mix(
-    in srgb,
-    var(--color-lightmode-dark) 35%,
-    var(--color-lightmode-light) 65%
-  ); /* #585858 */
-  --sl-color-gray-4: color-mix(
-    in srgb,
-    var(--color-lightmode-dark) 55%,
-    var(--color-lightmode-light) 45%
-  ); /* #8b8b8b */
-  --sl-color-gray-5: color-mix(
-    in srgb,
-    var(--color-lightmode-dark) 76%,
-    var(--color-lightmode-light) 24%
-  ); /* #c2c2c2 */
-  --sl-color-gray-6: color-mix(
-    in srgb,
-    var(--color-lightmode-dark) 94%,
-    var(--color-lightmode-light) 6%
-  ); /* #eeeeee */
-  --sl-color-gray-7: color-mix(
-    in srgb,
-    var(--color-lightmode-dark) 96%,
-    var(--color-lightmode-light) 4%
-  ); /* #f6f6f6 */
-
-
-  --sl-color-black: var(--color-lightmode-dark);
+  --sl-color-accent: var(--color-neon);
+  --sl-color-white: #000000; /* Darker text for readability on light */
+  --sl-color-gray-1: #1a1a1a;
+  --sl-color-black: #f6f6f6;
+  
+  /* We force the background to remain darkish for the Forensics feel */
+  --sl-color-bg: #e8e8e8; 
 }
 
 @theme {
+  /* Updated Gradient to be Gold -> Green -> Deep Purple/Black */
   --color-primary-gradient: linear-gradient(
     35.65deg,
-    #3a1c71 -10.94%,
-    var(--color-primary) 61.04%,
-    #ffca7b 133.01%
+    #050505 -10.94%,
+    var(--color-neon) 61.04%,
+    var(--color-gold) 133.01%
   );
+}
+
+/* --- Global Overrides & Background --- */
+
+body {
+  /* White to Gold */
+  color: var(--color-gold);
+  
+  /* Applying your specific background image */
+  background-image: url('../assets/bannerless-bg-BooMBox.png');
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-color: var(--color-dark);
+}
+
+/* Ensure all headings are Gold */
+h1, h2, h3, h4, h5, .section-title {
+  color: var(--color-gold) !important;
+}
+
+/* Ensure all paragraphs and descriptions are Neon Green */
+p, li, .section-description, .light-text {
+  color: var(--color-neon) !important;
+}
+
+/* Glassmorphism for Starlight Cards and Sidebar */
+.sl-card, .list-body, .hero-tabs-item {
+  background: rgba(0, 0, 0, 0.7) !important;
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--color-neon) !important;
+  box-shadow: 0 0 15px rgba(0, 255, 156, 0.1);
 }
 
 @import "./base.css";
 @import "./navigation.css";
 @import "./components.css";
 @import "./button.css";
-

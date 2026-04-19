@@ -1,0 +1,29 @@
+/* src/styles/custom.css */
+:root {
+  /* --- BooMBox Color Palette --- */
+  --gold-primary: #fbbf24;      /* High-vis Gold */
+  --neon-green: #00ff9c;        /* Electric Neon Green */
+  --deep-bg: #050505;           /* Near-black */
+
+  /* Starlight Variable Overrides */
+  --sl-color-white: var(--gold-primary) !important;
+  --sl-color-gray-1: var(--neon-green) !important;
+  --sl-color-gray-2: var(--neon-green) !important;
+  --sl-color-gray-3: rgba(0, 255, 156, 0.7) !important;
+  
+  --sl-color-accent-high: var(--gold-primary) !important;
+  --sl-color-accent: var(--neon-green) !important;
+  --sl-color-bg: var(--deep-bg) !important;
+}
+
+body {
+  color: var(--gold-primary);
+  /* Make sure this image path is correct based on our previous troubleshooting! */
+  background-image: url('../../assets/bannerless-bg-BooMBox.png');
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.light-text {
+  color: var(--neon-green) !important;
+}
