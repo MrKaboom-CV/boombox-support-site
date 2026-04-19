@@ -9,43 +9,34 @@
 
 :root {
   /* --- BooMBox Base Palette --- */
-  --color-gold: #fbbf24;       /* Neon Gold */
-  --color-neon: #00ff9c;       /* Neon Green */
-  --color-dark: #050505;       /* Deep Lab Background */
+  --color-gold: #fbbf24;       
+  --color-neon: #00ff9c;       
+  --color-dark: #050505;       
 
   /* Starlight Core Overrides */
   --sl-color-accent: var(--color-neon);
   --sl-color-accent-low: #003320;
   --sl-color-accent-high: var(--color-gold);
-
-  /* Mapping: White Font -> Gold */
   --sl-color-white: var(--color-gold);
-
-  /* Mapping: Gray Fonts -> Neon Green Variations */
   --sl-color-gray-1: var(--color-neon); 
   --sl-color-gray-2: color-mix(in srgb, var(--color-neon) 80%, transparent);
   --sl-color-gray-3: color-mix(in srgb, var(--color-neon) 60%, transparent);
   --sl-color-gray-4: color-mix(in srgb, var(--color-neon) 40%, transparent);
   --sl-color-gray-5: #1a1a1a;
   --sl-color-gray-6: #111111;
-
   --sl-color-black: var(--color-dark);
   --sl-sidebar-width: 320px;
-  
   --sl-color-hairline: color-mix(in srgb, var(--color-neon) 20%, transparent);
   --sl-color-hairline-light: #1a4d3a;
 
-  /* FIX: Starlight background must be transparent to see the body image */
+  /* FIX: Starlight layers must be transparent to see the image below */
   --sl-color-bg: transparent !important;
 }
 
-/* Maintain the "BooMBox" vibe in Light Mode */
+/* Force consistency in Light Mode */
 :root[data-theme="light"] {
-  --sl-color-accent: var(--color-neon);
-  --sl-color-white: #000000;
-  --sl-color-gray-1: #1a1a1a;
-  --sl-color-black: #f6f6f6;
-  --sl-color-bg: transparent !important; 
+  --sl-color-bg: transparent !important;
+  --sl-color-white: #000;
 }
 
 @theme {
@@ -57,14 +48,14 @@
   );
 }
 
-/* --- Global Overrides & Neon Background --- */
+/* --- Background Image & Layering --- */
 
 body {
   color: var(--color-gold);
   
-  /* 1. Applying Background with a 40% dimming overlay to prevent drowning text */
+  /* Applying Background with a 45% dark tint to act as a "shadow-box" for the glow */
   background: 
-    linear-gradient(rgba(5, 5, 5, 0.4), rgba(5, 5, 5, 0.4)), 
+    linear-gradient(rgba(5, 5, 5, 0.45), rgba(5, 5, 5, 0.45)), 
     url('../assets/Boombox_logo02.PNG') !important;
   
   background-size: cover !important;
@@ -74,49 +65,50 @@ body {
   background-color: var(--color-dark) !important;
 }
 
-/* 2. Clear Starlight UI layers that block the background */
-.page, 
-.main-frame, 
-.content-panel, 
-.sl-container, 
-main {
+/* Clear all containers that might block the body background */
+.page, .main-frame, .content-panel, .sl-container, main, .hero-bg {
   background-color: transparent !important;
+  background-image: none !important;
 }
 
-/* 3. NEON GOLD GLOW (Headings) */
+/* --- THE UNIQUE INVERSE GLOW --- */
+
+/* 1. NEON GOLD TEXT with NEON GREEN OUTLINE (Headings) */
 h1, h2, h3, h4, h5, .section-title {
   color: var(--color-gold) !important;
+  font-weight: 700;
+  letter-spacing: 0.03em;
   text-shadow: 
-    1px 1px 1px #000,                /* Sharp contrast edge */
-    0 0 8px rgba(251, 191, 36, 0.6),   /* Core glow */
-    0 0 15px rgba(251, 191, 36, 0.3) !important; /* Outer aura */
-  letter-spacing: 0.02em;
+    1px 1px 0px #000,                 /* Sharp black edge for clarity */
+    -1px -1px 0px #000,               /* Sharp black edge */
+    0 0 8px rgba(0, 255, 156, 0.8),    /* Strong NEON GREEN plasma */
+    0 0 16px rgba(0, 255, 156, 0.4) !important; /* Wide GREEN aura */
 }
 
-/* 4. NEON GREEN GLOW (Body Text) */
-p, li, .section-description, .light-text, span:not(.sl-badge) {
+/* 2. NEON GREEN TEXT with NEON GOLD OUTLINE (Body Text) */
+p, li, .section-description, .light-text {
   color: var(--color-neon) !important;
-  font-weight: 450;                  /* Slightly thicker for glow effect */
+  font-weight: 450; 
   text-shadow: 
-    1px 1px 1px #000,                /* CRITICAL: Protects text from BG noise */
-    0 0 6px rgba(0, 255, 156, 0.5),    /* Soft green neon aura */
-    0 0 12px rgba(0, 255, 156, 0.2) !important;
+    1px 1px 0px #000,                 /* Sharp black edge for clarity */
+    -1px -1px 0px #000,               /* Sharp black edge */
+    0 0 6px rgba(251, 191, 36, 0.7),   /* Strong NEON GOLD plasma */
+    0 0 12px rgba(251, 191, 36, 0.3) !important; /* Wide GOLD aura */
 }
 
-/* 5. Hover "Pulse" for links to match video ring feel */
+/* hover effect: making them swap or intensify */
 a:hover {
-  text-shadow: 
-    0 0 10px var(--color-neon),
-    0 0 20px var(--color-neon) !important;
-  transition: text-shadow 0.3s ease-in-out;
+  filter: brightness(1.3);
+  transition: all 0.3s ease;
 }
 
-/* Glassmorphism for Starlight Cards and Sidebar */
+/* --- Glassmorphism Enhancements --- */
+
 .sl-card, .list-body, .hero-tabs-item {
-  background: rgba(0, 0, 0, 0.75) !important; /* Slightly darker for better readability */
+  background: rgba(0, 0, 0, 0.8) !important; /* Darker cards to make text pop */
   backdrop-filter: blur(12px);
   border: 1px solid var(--color-neon) !important;
-  box-shadow: 0 0 20px rgba(0, 255, 156, 0.15);
+  box-shadow: 0 0 25px rgba(0, 255, 156, 0.1);
 }
 
 @import "./base.css";
