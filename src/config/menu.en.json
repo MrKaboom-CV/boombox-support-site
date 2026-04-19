@@ -51,7 +51,7 @@
       "links": [
         {
           "name": "Getting Started",
-          "url": "/"
+          "url": "/getting-started/navigation/"
         },
         {
           "name": "Privacy Policy",
@@ -76,22 +76,6 @@
       "links": [
         {
           "name": "Documentation Hub",
-          "url": "/docs/"
-        },
-        {
-          "name": "Theme Gallery",
-          "url": "/"
-        },
-        {
-          "name": "Best Practices",
-          "url": "/"
-        },
-        {
-          "name": "Performance Tips",
-          "url": "/"
-        },
-        {
-          "name": "Migration Guide",
           "url": "/"
         }
       ]
