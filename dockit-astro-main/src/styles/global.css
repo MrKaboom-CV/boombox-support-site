@@ -9,7 +9,7 @@
 
 :root {
   --sl-color-accent-low: color-mix(in srgb, var(--color-primary), #000 90%);
-  --sl-color-accent: var(--color-primary);
+  --sl-color-accent: #ffb000; /* Your Vault Gold */
   --sl-color-accent-high: color-mix(in srgb, var(--color-primary), #fff 70%);
 
   --sl-color-white: var(--color-light);
