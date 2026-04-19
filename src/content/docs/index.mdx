@@ -8,8 +8,9 @@ hero:
     <span class="light-text">AI Forensics & Grading</span>
   tagline: Professional-grade analysis, automated card authentication, and lightning-fast digital grading.
   image:
-    # Use a relative path here
-    file: ../../assets/BooMBox-title.jpg
+    # 1. FIXED: Pointing to the actual file name you provided
+    # 2. FIXED: Using relative path (../../) instead of absolute (/src)
+    file: ../../assets/bannerless-bg-BooMBox.png
   actions:
     - text: Launch Forensics
       link: /getting-started/introduction/overview/
@@ -55,6 +56,7 @@ import HeroTabsItem from "~/components/HeroTabsItem.astro";
       title="Scan Your Asset"
       subtitle="Upload a high-res photo or 300DPI scan of your card."
       number={1}
+      # Make sure this image exists in src/assets/ or remove this line
       image="../../assets/screenshot-intake.PNG" 
       imageAlt="Step 1: Scanning"
     />
@@ -62,55 +64,14 @@ import HeroTabsItem from "~/components/HeroTabsItem.astro";
       title="AI Processing"
       subtitle="Our AI Forensics engine analyzes centering, edges, and corners."
       number={2}
-      image="../../assets/step-2.png"
-      imageAlt="Step 2: Processing"
+      # Removing broken placeholder paths to ensure build passes
     />
     <HeroTabsItem
       title="Generate Report"
       subtitle="Receive a certified BooMBox digital grade and PDF report."
       number={3}
-      image="../../assets/step-3.png"
-      imageAlt="Step 3: Documentation"
     />
   </HeroTabs>
-</Section>
-
-import ListCard from "~/components/user-components/ListCard.astro";
-import LinkButton from "~/components/LinkButton.astro";
-
-<Section title="Explore the <span class='light-text'>Forensics Lab</span>" description="Deep dive into our technology and documentation.">
-
-<Grid columns={3}>
-<ListCard title="Grading Logic" imageIcon="../../assets/element.svg" number="10">
-- [Surface Analysis](/contents/components/using-components/)
-- [Centering Ratios](/contents/components/using-components/)
-- [Edge Detection](/contents/components/using-components/)
-- [Corner Radius Calculation](/contents/components/using-components/)
-- [Sub-grade Weighting](/contents/components/using-components/)
-
-<LinkButton href="/contents/components/using-components/" variant="text" className="mt-6 mb-8 ml-4">View Grading Specs</LinkButton>
-</ListCard>
-
-<ListCard title="API Integration" imageIcon="../../assets/code-block.svg" number="12">
-- Webhook Setup
-- JSON Response Schema
-- High-Res Image Uploads
-- Rate Limiting
-- Auth Tokens
-
-<LinkButton href="/contents/editing/add-new-doc/" variant="text" className="mt-6 mb-8 ml-4">View API Docs</LinkButton>
-</ListCard>
-
-<ListCard title="Sample Scans" imageIcon="../../assets/layouts.svg" number="5">
-- Modern Pokémon
-- Vintage Baseball
-- TCG/Magic
-- Sports Memorabilia
-- Error Cards
-
-<LinkButton href="/getting-started/introduction/overview/" variant="text" className="mt-6 mb-8 ml-4">View Gallery</LinkButton>
-</ListCard>
-</Grid>
 </Section>
 
 import ThemeDemo from "~/components/ThemeDemo.astro";
@@ -120,6 +81,7 @@ import ThemeDemo from "~/components/ThemeDemo.astro";
   description="Switch to Dark Mode for high-contrast forensic scan viewing."
 >
 
+{/* If screenshot-scan.PNG exists, keep this. If not, delete this component block */}
 <ThemeDemo
   darkImage="../../assets/screenshot-scan.PNG"
   lightImage="../../assets/lightmode-demo.png"
