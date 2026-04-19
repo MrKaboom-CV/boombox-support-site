@@ -3,23 +3,17 @@
     {
       "icon": "facebook",
       "label": "Facebook",
-      "href": "https://www.facebook.com/"
+      "href": "https://www.facebook.com/your-boombox-page"
     },
     {
-      "icon": "slack",
-      "label": "Slack",
-      "href": "https://slack.com/"
+      "icon": "instagram",
+      "label": "Instagram",
+      "href": "https://www.instagram.com/your-boombox-handle"
     },
     {
-      "icon": "github",
-      "label": "GitHub",
-      "href": "https://www.github.com/"
-    },
-
-    {
-      "icon": "linkedin",
-      "label": "LinkedIn",
-      "href": "https://www.linkedin.com/"
+      "icon": "x",
+      "label": "Twitter / X",
+      "href": "https://twitter.com/your-boombox-handle"
     }
   ]
 }
