@@ -12,35 +12,38 @@ import boomIntroVideo from "../../assets/boom-intro.mp4";
     </p>
 
     <div class="relative group video-container border-2 border-[#00ff41] rounded-xl overflow-hidden bg-black aspect-video flex items-center justify-center shadow-[0_0_20px_rgba(0,255,65,0.2)]">
-      
-      <video 
-        id="hero-video"
-        src={boomIntroVideo} 
-        width="100%" 
-        height="auto" 
-        autoplay 
-        muted 
-        loop 
-        playsinline
-        class="w-full h-full object-cover"
-      >
-        Your browser does not support the video tag.
-      </video>
+      {Astro.url.pathname === '/docs/' && (
+        <>
+          <video 
+            id="hero-video"
+            src={boomIntroVideo} 
+            width="100%" 
+            height="auto" 
+            autoplay 
+            muted 
+            loop 
+            playsinline
+            class="w-full h-full object-cover"
+          >
+            Your browser does not support the video tag.
+          </video>
 
-      <div class="absolute bottom-4 right-4 flex items-center gap-3 bg-black/60 backdrop-blur-md p-3 rounded-lg border border-[#00ff41]/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-        <button id="mute-btn" class="text-[#00ff41] hover:scale-110 transition-transform">
-          <span id="mute-icon">🔇</span>
-        </button>
-        <input 
-          type="range" 
-          id="volume-slider" 
-          min="0" 
-          max="1" 
-          step="0.1" 
-          value="0"
-          class="w-24 accent-[#00ff41] cursor-pointer"
-        />
-      </div>
+          <div class="absolute bottom-4 right-4 flex items-center gap-3 bg-black/60 backdrop-blur-md p-3 rounded-lg border border-[#00ff41]/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <button id="mute-btn" class="text-[#00ff41] hover:scale-110 transition-transform">
+              <span id="mute-icon">🔇</span>
+            </button>
+            <input 
+              type="range" 
+              id="volume-slider" 
+              min="0" 
+              max="1" 
+              step="0.1" 
+              value="0"
+              class="w-24 accent-[#00ff41] cursor-pointer"
+            />
+          </div>
+        </>
+      )}
     </div>
   </div>
 </section>
