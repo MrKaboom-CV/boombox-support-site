@@ -6,7 +6,7 @@
     },
     {
       "name": "Documentation",
-      "url": "/about"
+      "url": "/docs/about/"
     }
   ],
   "footer": {
@@ -15,11 +15,11 @@
       "links": [
         {
           "name": "Privacy Policy",
-          "url": "/privacy-policy"
+          "url": "/docs/legal/privacy/"
         },
         {
           "name": "Terms",
-          "url": "/terms-conditions"
+          "url": "/docs/legal/terms/"
         }
       ]
     },
@@ -28,7 +28,7 @@
       "links": [
         {
           "name": "About Us",
-          "url": "/about"
+          "url": "/docs/about/"
         }
       ]
     }
