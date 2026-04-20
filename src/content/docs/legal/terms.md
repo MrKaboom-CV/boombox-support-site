@@ -4,6 +4,12 @@ description: Usage terms for BooMBox Card Vault
 ---
 
 ## Terms of Service
-By using the BooMBox Lab, you agree to our digital forensic standards.
 
-Full details coming soon.
+### Usage
+By using BooMBox Card Vault, you agree to use our services for legitimate trading card authentication purposes only.
+
+### Service Availability
+We strive to maintain 99.9% uptime for our forensic analysis services.
+
+### Contact
+For questions about these terms, contact legal@boomvaultcv.com.

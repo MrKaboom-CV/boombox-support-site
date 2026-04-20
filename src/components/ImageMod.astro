@@ -34,13 +34,23 @@ let {
 
 
 
-const images = import.meta.glob("src/assets/*.{jpeg,jpg,png,gif,svg,webp}");
+const images = import.meta.glob<{ default: ImageMetadata }>("../assets/*.{jpeg,jpg,png,gif,svg,webp}", { eager: true });
+
+// Normalize the src path to match glob keys format
+const normalizePath = (path: string) => {
+  if (!path) return "";
+  // Extract just the filename from the path
+  const filename = path.split("/").pop() || path;
+  return `../assets/${filename}`;
+};
+
+const normalizedSrc = normalizePath(src);
 
 // Check if the source path is valid
-const isValidPath = images[src] ? true : false;
+const isValidPath = images[normalizedSrc] ? true : false;
 
 
-!isValidPath &&
+!isValidPath && src &&
   console.error(
     `\x1b[31mImage not found - ${src}.\x1b[0m Make sure the image is in the /src/assets folder.`,
   );
@@ -49,9 +59,9 @@ const isValidPath = images[src] ? true : false;
 ---
 
 {
-  isValidPath && (
+  isValidPath && src && (
     <Image
-      src={images[src]() as Promise<{ default: ImageMetadata }>}
+      src={images[normalizedSrc].default}
       alt={alt}
       width={width}
       height={height}

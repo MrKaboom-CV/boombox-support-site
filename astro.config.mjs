@@ -18,16 +18,22 @@ export const locales = locals;
 
 // https://astro.build/config
 export default defineConfig({
-  // Note: 'noop' service disables Astro's image optimization. 
-  // If you want Astro to handle image resizing, change this to 'sharp' later.
-  image: {
-    service: { entrypoint: "astro/assets/services/noop" },
-  },
+  // 1. Set the primary domain for SEO and metadata
+  site: "https://boomboxcv.com",
+
+  // 2. Vercel and Starlight work best with 'always' or 'ignore' 
+  // to prevent 404s on sub-pages.
+  trailingSlash: 'always',
+
+ // astro.config.mjs
+image: {
+  service: { entrypoint: "astro/assets/services/sharp" },
+},
+
   integrations: [
     starlight({
       title,
       logo: {
-        // Ensure site.logo in config.json is "bannerless-bg-BooMBox.png"
         light: logo,
         dark: logo_darkmode,
         alt: "BooMBox Logo",
@@ -36,7 +42,6 @@ export default defineConfig({
       social: social.main || [],
       locales,
       sidebar: sidebar.main || [],
-      // Pointing to your existing global.css
       customCss: ["./src/styles/global.css"],
       components: {
         Head: "./src/components/override-components/Head.astro",
@@ -51,8 +56,9 @@ export default defineConfig({
       },
     }),
   ],
+
   vite: {
-    plugins: /** @type {any} */ ([tailwindcss(), viewTransitions()]),
+    plugins: [tailwindcss(), viewTransitions()],
     resolve: {
       alias: {
         "@": fileURLToPath(new URL("./src", import.meta.url)),

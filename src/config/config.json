@@ -2,8 +2,8 @@
   "site": {
     "title": "BooMBox Card Vault",
     "description": "AI Forensic Collectible Card Vault & Market Tracker",
-    "logo": "./src/assets/Boombox_logo.png",
-    "logo_darkmode": "./src/assets/Boombox_logo.png",
+    "logo": "src/assets/Boombox_logo.png",
+    "logo_darkmode": "src/assets/Boombox_logo.png",
     "logo_width": "160",
     "logo_height": "40",
     "logo_text": "BooMBox"
@@ -17,14 +17,11 @@
       "enable": true,
       "action": "/contact/"
     },
-    "copyright": "© 2026 BooMBox. Designed and Developed by MrKaboom"
+    "copyright": "© 2026 BooMBox. Designed and Developed by MrBoom"
   },
   "navigation_button": {
-    "enable": true,
-    "label": "Launch Lab",
-    "translations": {
-      "fr": "Lancer le Labo"
-    },
-    "link": "/getting-started/introduction/overview/"
-  }
+  "enable": false, 
+  "label": "Launch Lab",
+  "link": "/" 
+}
 }

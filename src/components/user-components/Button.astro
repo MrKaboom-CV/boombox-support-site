@@ -1,5 +1,6 @@
 ---
 const { label, link, variant } = Astro.props;
 ---
-
-<a href={link} class={`btn btn-${variant}`}>{label}</a>
+<a href={link || "/"} class={`btn btn-${variant || "primary"}`}>
+  {label}
+</a>

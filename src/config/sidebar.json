@@ -1,6 +1,10 @@
 {
   "main": [
     {
+      "label": "[star] About",
+      "slug": "about"
+    },
+    {
       "label": "Customer Support",
       "items": [
         { "label": "[email] Contact Us", "slug": "support/contact" },
