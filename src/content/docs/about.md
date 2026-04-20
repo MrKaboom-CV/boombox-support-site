@@ -1,5 +1,6 @@
 ---
-title: About
+title: About BooMBox
+description: Learn about the BooMBox Card Vault and our mission
 template: splash
 
 lastUpdated: 2025-09-30
@@ -8,46 +9,26 @@ head:
     content: |
       .hero-bg { display: none !important; }
       .content-panel { max-width: 70rem !important; margin: auto; padding:1.5rem 0px !important; }
-      #_top{
-      text-align: center;
-      font-size: 4rem;
-      padding-bottom: 3rem;
-      }
 ---
 
-## Introduction
+## About BooMBox Card Vault
 
-At DocKit, we are committed to protecting your privacy and ensuring the security of your personal information. This About explains how we collect, use, disclose, and safeguard your information when you visit our documentation site and use our services.
+BooMBox is revolutionizing trading card authentication and grading through advanced AI forensics technology.
 
-By using DocKit, you consent to the data practices described in this policy.
+### Our Mission
 
-## Information We Collect
+To provide professional-grade analysis tools for high-value collectibles, ensuring authenticity and quality through cutting-edge digital forensics.
 
-### Information You Provide to Us
+### Technology
 
-We may collect information that you voluntarily provide to us when you:
+- **AI-Powered Analysis**: Proprietary neural networks for surface defect detection
+- **Blockchain Security**: Tamper-proof report anchoring
+- **4K Resolution Processing**: Lightning-fast high-resolution scanning
+- **Custom Grading Scales**: Tailored to your specific requirements
 
-- Create an account or register for our services
-- Subscribe to our newsletter or updates
-- Participate in community discussions or forums
-- Submit bug reports or feature requests
-- Contact us for support or inquiries
-- Contribute to our open-source projects
+### Contact
 
-This information may include:
-
-- Name and email address
-- Username and profile information
-- Communication preferences
-- Any other information you choose to provide
-
-### Information Automatically Collected
-
-When you visit our site, we may automatically collect certain information about your device and usage patterns, including:
-
-- IP address and general location information
-- Browser type and version
-- Operating system
+For more information, visit our [support page](/docs/support/contact/) or email support@boomvaultcv.com.
 - Pages visited and time spent on each page
 - Referring websites
 - Device information and screen resolution
