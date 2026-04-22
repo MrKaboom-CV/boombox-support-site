@@ -29,7 +29,8 @@
   --sl-color-hairline: color-mix(in srgb, var(--color-neon) 20%, transparent);
   --sl-color-hairline-light: #1a4d3a;
 
-  /* FIX: Starlight layers must be transparent to see the image below */
+  /* Sidebar styling with translucent smoked glass effect */
+  --sl-color-sidebar-bg: rgba(5, 5, 5, 0.5) !important;
   --sl-color-bg: transparent !important;
 }
 
@@ -37,6 +38,7 @@
 :root[data-theme="light"] {
   --sl-color-bg: transparent !important;
   --sl-color-white: #000;
+  --sl-color-sidebar-bg: rgba(240, 240, 240, 0.5) !important;
 }
 
 @theme {
@@ -115,3 +117,19 @@ a:hover {
 @import "./navigation.css";
 @import "./components.css";
 @import "./button.css";
+
+/* Translucent Sidebar Styling */
+aside[aria-label="Sidebar"] {
+  background: rgba(5, 5, 5, 0.5) !important;
+  backdrop-filter: blur(10px);
+}
+
+.sl-sidebar {
+  background: rgba(5, 5, 5, 0.5) !important;
+  backdrop-filter: blur(10px);
+}
+
+.sidebar {
+  background: rgba(5, 5, 5, 0.5) !important;
+  backdrop-filter: blur(10px);
+}

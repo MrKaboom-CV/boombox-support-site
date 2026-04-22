@@ -27,9 +27,8 @@ body {
   @apply absolute top-0 left-0 w-full -z-10 object-cover;
 }
 
-/* Cleaned up doc-bg - now uses your specific image */
+/* Cleaned up doc-bg - background image removed */
 .doc-bg {
-  background-image: url('/src/assets/bannerless-bg-BooMBox.png');
   @apply h-screen bg-no-repeat absolute top-0 left-0 w-full -z-10 bg-cover;
 }
 

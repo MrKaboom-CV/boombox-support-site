@@ -1,9 +1,9 @@
 {
   "name": "boombox-website",
   "private": true,
-  "version": "1.0.0",
-  "description": "DocKit Astro is a simple, modern documentation theme built using Astro and Tailwind CSS",
-  "author": "Themefisher",
+  "version": "1.0.26",
+  "description": "BooMBox Card Vault- Your Ultimate Card Management Solution",
+  "author": "MrBooM",
   "license": "MIT",
   "type": "module",
   "scripts": {

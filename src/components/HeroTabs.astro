@@ -104,7 +104,8 @@
 
         .hero-tabs-nav .tab-number {
           font-size: 1.1rem;
-          background: var(--sl-color-black);
+          background: rgba(5, 5, 5, 0.4);
+          backdrop-filter: blur(10px);
           color: var(--sl-color-light);
           width: 2rem;
           height: 2rem;
@@ -114,6 +115,7 @@
           justify-content: center;
           flex-shrink: 0;
           transition: all 0.3s ease;
+          border: 1px solid rgba(0, 255, 156, 0.2);
         }
 
         .hero-tabs-nav .tab-content {
@@ -138,11 +140,13 @@
 
         .hero-tabs-content {
           position: relative;
-          
           overflow: hidden;
-          background-color: var(--sl-color-black);
+          background: rgba(5, 5, 5, 0.4);
+          backdrop-filter: blur(10px);
           margin-top: 3.5rem;
           padding: 0.6rem;
+          border: 1px solid rgba(0, 255, 156, 0.1);
+          border-radius: 8px;
         }
         
         .hero-tabs-content .hero-tab-content {

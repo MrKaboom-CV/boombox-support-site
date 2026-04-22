@@ -18,10 +18,7 @@
 
 body {
   color: var(--gold-primary);
-  /* Make sure this image path is correct based on our previous troubleshooting! */
-  background-image: url('../../assets/bannerless-bg-BooMBox.png');
-  background-size: cover;
-  background-attachment: fixed;
+  /* Background image removed from hero section */
 }
 
 .light-text {
