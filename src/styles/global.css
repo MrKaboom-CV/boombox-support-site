@@ -67,6 +67,22 @@ body {
   background-color: var(--color-dark) !important;
 }
 
+/* Page-specific background from CSS variable set by PageFrame component */
+.page {
+  --page-bg: url('../assets/Boombox_logo02.PNG');
+}
+
+body {
+  background: 
+    linear-gradient(rgba(5, 5, 5, 0.45), rgba(5, 5, 5, 0.45)), 
+    var(--page-bg) !important;
+  background-size: cover !important;
+  background-attachment: fixed !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-color: var(--color-dark) !important;
+}
+
 /* Clear all containers that might block the body background */
 .page, .main-frame, .content-panel, .sl-container, main, .hero-bg {
   background-color: transparent !important;

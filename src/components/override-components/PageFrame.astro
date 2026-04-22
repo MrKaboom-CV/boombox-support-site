@@ -6,9 +6,23 @@ import SidebarNav from "../SidebarNav.astro";
 import ImageMod from "../ImageMod.astro";
 
 const { hasSidebar } = Astro.locals.starlightRoute;
+
+// Determine background image based on current page
+const pathname = Astro.url.pathname;
+let bgImage = '/src/assets/Boombox_logo02.PNG'; // default
+
+// About page and App Features page - use bannerless-bg-BooMBox.png
+if (pathname.includes('/about/') || pathname.includes('/support/features/')) {
+  bgImage = '/src/assets/bannerless-bg-BooMBox.png';
+}
+
+// Customer Support, Legal pages, and Release Notes - use BooMBox04.png
+if (pathname.includes('/support/contact/') || pathname.includes('/legal/') || pathname.includes('/updates/')) {
+  bgImage = '/src/assets/BooMBox04.png';
+}
 ---
 
-<div class="page sl-flex">
+<div class="page sl-flex" style={`--page-bg: url('${bgImage}');`}>
   {
     !hasSidebar ? (
       <div class="hero-bg">
