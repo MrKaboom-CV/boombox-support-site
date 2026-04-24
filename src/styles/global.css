@@ -56,7 +56,7 @@ body {
   color: var(--color-gold);
   
   /* Applying Background with a 45% dark tint to act as a "shadow-box" for the glow */
-  background: 
+  background-image: 
     linear-gradient(rgba(5, 5, 5, 0.45), rgba(5, 5, 5, 0.45)), 
     url('../assets/bannerless-bg-BooMBox.png') !important;
   
