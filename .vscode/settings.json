@@ -1,5 +1,6 @@
 {
     "cSpell.words": [
         "lightmode"
-    ]
+    ],
+    "css.lint.unknownAtRules": "ignore"
 }
