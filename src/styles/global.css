@@ -58,7 +58,7 @@ body {
   /* Applying Background with a 45% dark tint to act as a "shadow-box" for the glow */
   background: 
     linear-gradient(rgba(5, 5, 5, 0.45), rgba(5, 5, 5, 0.45)), 
-    url('../assets/Boombox_logo02.PNG') !important;
+    url('../assets/bannerless-bg-BooMBox.png') !important;
   
   background-size: cover !important;
   background-attachment: fixed !important;
