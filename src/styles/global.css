@@ -164,3 +164,16 @@ header.header {
   background-image: none;
   background-color: var(--sl-color-bg-nav) !important;
 }
+
+/* 3. Hide all default buttons, toggles, imagery, and text from the taskbar */
+header.header .navbar-actions,          /* DocKit right side actions */
+header.header .search-bar,              /* DocKit search */
+header.header site-search,              /* Starlight default search */
+header.header .theme-switcher,          /* DocKit theme toggle */
+header.header starlight-theme-select,   /* Starlight default theme toggle */
+header.header .social-icons,            /* Social links */
+header.header .navbar-brand,            /* DocKit Logo & Title */
+header.header .site-title               /* Starlight default Logo & Title */
+{
+  display: none !important;
+}
