@@ -152,6 +152,7 @@ header.header {
   
   /* Semi-transparent overlay so your text stays readable (#0d0d0d at 85% opacity) */
   background-color: rgba(13, 13, 13, 0.85) !important;
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   
   /* Keep the neon green border at the bottom for that forensic look */

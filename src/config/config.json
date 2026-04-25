@@ -2,8 +2,8 @@
   "site": {
     "title": "BooMBox Card Vault",
     "description": "AI Forensic Collectible Card Vault & Market Tracker",
-    "logo": "src/assets/your-new-logo.svg",
-    "logo_darkmode": "src/assets/your-new-logo.svg",
+    "logo": "src/assets/Boombox_logo.png",
+    "logo_darkmode": "src/assets/Boombox_logo.png",
     "logo_width": "45",
     "logo_height": "45",
     "logo_text": "BooMBox"
