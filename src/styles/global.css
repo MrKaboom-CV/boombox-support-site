@@ -58,11 +58,11 @@ body {
   /* Applying Background with a 45% dark tint to act as a "shadow-box" for the glow */
   background-image: 
     linear-gradient(rgba(5, 5, 5, 0.45), rgba(5, 5, 5, 0.45)), 
-    url('../assets/boombox_background_pattern.svg') !important;
+    url('../assets/bannerless-bg-BooMBox.png') !important;
   
-  background-size: 400px !important;
+  background-size: 100% auto !important;
   background-attachment: scroll !important;
-  background-repeat: repeat !important;
+  background-repeat: no-repeat !important;
   background-position: top center !important;
   background-color: var(--color-dark) !important;
 }
