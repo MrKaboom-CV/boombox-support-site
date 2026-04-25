@@ -187,15 +187,7 @@ header.header .site-title {
   transform: translate(-50%, -50%) !important;
   z-index: 50;
   /* Adds a sleek cyberpunk glow behind the logo image */
-  filter: drop-shadow(0 0 12px rgba(0, 255, 156, 0.6));
-}
-
-/* 5. Ensure the logo image is perfectly sized for the taskbar */
-header.header .navbar-brand img,
-header.header .site-title img {
-  height: 45px !important; /* Increase or decrease this to change the logo size */
-  width: auto !important;
-  display: block !important;
+  filter: drop-shadow(0 0 10px rgba(0, 255, 156, 0.4));
 }
 
 /* Hide the text title, so ONLY the logo image shows */
