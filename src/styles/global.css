@@ -137,3 +137,30 @@ aside[aria-label="Sidebar"] {
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
 }
+/**
+ * BOOMBOX HEADER CUSTOMIZATION
+ * Applies the 'completely-mini' cyberpunk SVG to the taskbar
+ */
+
+/* 1. The main rule for the taskbar */
+header.header {
+  /* Relative path from src/styles/global.css to src/assets/ */
+  background-image: url("../assets/Boom-cyberpunk-website-background--completely-mini.svg");
+  background-repeat: repeat-x;
+  background-size: auto 100%;
+  background-position: left center;
+  
+  /* Semi-transparent overlay so your text stays readable (#0d0d0d at 85% opacity) */
+  background-color: rgba(13, 13, 13, 0.85) !important;
+  backdrop-filter: blur(10px);
+  
+  /* Keep the neon green border at the bottom for that forensic look */
+  border-bottom: 1px solid var(--sl-color-accent, #00ff41);
+}
+
+/* 2. Optional: If the SVG is too bright for light mode, 
+      only show it when the site is in dark mode */
+:root[data-theme='light'] header.header {
+  background-image: none;
+  background-color: var(--sl-color-bg-nav) !important;
+}
