@@ -172,26 +172,9 @@ header.header .search-bar,              /* DocKit search */
 header.header site-search,              /* Starlight default search */
 header.header .theme-switcher,          /* DocKit theme toggle */
 header.header starlight-theme-select,   /* Starlight default theme toggle */
-header.header .social-icons             /* Social links */
+header.header .social-icons,            /* Social links */
+header.header .navbar-brand,            /* DocKit Logo & Title */
+header.header .site-title               /* Starlight default Logo & Title */
 {
-  display: none !important;
-}
-
-/* 4. Perfectly center the logo to act as a home button */
-header.header .navbar-brand,
-header.header .site-title {
-  display: flex !important;
-  position: absolute !important;
-  left: 50% !important;
-  top: 50% !important;
-  transform: translate(-50%, -50%) !important;
-  z-index: 50;
-  /* Adds a sleek cyberpunk glow behind the logo image */
-  filter: drop-shadow(0 0 10px rgba(0, 255, 156, 0.4));
-}
-
-/* Hide the text title, so ONLY the logo image shows */
-header.header .navbar-brand span,
-header.header .site-title span {
   display: none !important;
 }
