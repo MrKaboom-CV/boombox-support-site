@@ -1,3 +1,8 @@
+"site": {
+  "title": "BooMBox",
+  "logo": "src/assets/your-new-logo.svg",
+  "logo_darkmode": "src/assets/your-new-logo.svg"
+}
 // @ts-check
 import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
