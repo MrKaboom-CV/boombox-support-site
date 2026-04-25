@@ -1,5 +1,9 @@
 {
   "main": [
+    {
+      "name": "Home",
+      "url": "/"
+    }
   ],
   "footer": {
     "help_links": {
