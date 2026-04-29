@@ -1,0 +1,90 @@
+---
+import ImageMod from "../ImageMod.astro";
+
+const {
+  themeColor = "#ff3333", // Default theme color (Fire Red)
+  watermark = "../../assets/BooMBox-logo01.png", // The background watermark
+  // Mocking some data for the first two cards, leaving the rest empty
+  cards = [
+    { name: "Charizard 1st Ed.", type: "Fire", grade: "Gem Mint 10" },
+    { name: "Pikachu Illustrator", type: "Electric", grade: "Mint 9" },
+  ]
+} = Astro.props;
+
+// Ensure we always have exactly 9 slots for the binder page
+const displaySlots = [...cards];
+while (displaySlots.length < 9) {
+  displaySlots.push(null);
+}
+---
+
+<!-- The wrapper applies the dynamic CSS variable for the user's chosen theme -->
+<div class="trade-binder-wrapper my-12" style={`--user-theme: ${themeColor};`}>
+  
+  <!-- The Binder Page (Off-white/Eggshell background) -->
+  <div class="binder-page bg-[#f4f4f5] relative p-4 md:p-6 rounded-xl shadow-2xl mx-auto max-w-4xl border-[10px] border-zinc-300">
+    
+    <!-- Binder Holes (Left edge) -->
+    <div class="absolute left-[-24px] top-0 bottom-0 flex flex-col justify-evenly py-10 z-0">
+      <div class="w-7 h-7 rounded-full bg-[#050505] shadow-inner ring-2 ring-zinc-400"></div>
+      <div class="w-7 h-7 rounded-full bg-[#050505] shadow-inner ring-2 ring-zinc-400"></div>
+      <div class="w-7 h-7 rounded-full bg-[#050505] shadow-inner ring-2 ring-zinc-400"></div>
+    </div>
+
+    <!-- Central Watermark Logo (5% Opacity) -->
+    <div class="absolute inset-0 z-0 flex items-center justify-center pointer-events-none opacity-5">
+      <ImageMod 
+        src={watermark} 
+        alt="Binder Watermark" 
+        width={600} 
+        height={600} 
+        class="w-3/4 object-contain filter grayscale" 
+      />
+    </div>
+
+    <!-- The 9-Pocket Grid -->
+    <div class="grid grid-cols-3 gap-3 md:gap-4 relative z-10">
+      {displaySlots.map((card, index) => (
+        <div class="pocket aspect-[2.5/3.5] rounded-lg border-[3px] border-white bg-white/40 shadow-[inset_0_2px_10px_rgba(0,0,0,0.1)] relative flex items-center justify-center overflow-hidden group cursor-pointer transition-all duration-300">
+          
+          <!-- Plastic Glare Effect -->
+          <div class="absolute inset-0 pointer-events-none bg-gradient-to-tr from-white/0 via-white/50 to-white/0 opacity-60 z-20"></div>
+          
+          {card ? (
+            /* Mockup of a filled slot */
+            <div class="card-content w-[92%] h-[94%] bg-zinc-900 rounded p-3 relative z-10 flex flex-col items-center justify-center text-center border border-[var(--user-theme)] shadow-[0_0_15px_var(--user-theme)]">
+              <span class="text-xs font-bold text-white mb-2">{card.name}</span>
+              <span class="text-[10px] text-zinc-400 uppercase tracking-widest">{card.grade}</span>
+            </div>
+          ) : (
+            /* Empty Slot */
+            <div class="empty-slot text-zinc-400 text-xs md:text-sm font-medium uppercase tracking-widest transition-colors duration-300 group-hover:text-[var(--user-theme)]">
+              Empty Slot
+            </div>
+          )}
+        </div>
+      ))}
+    </div>
+    
+  </div>
+</div>
+
+<style>
+  .trade-binder-wrapper {
+    /* We add padding to the left to make room for the 3 binder holes sticking out */
+    padding-left: 20px; 
+    /* A subtle glowing drop-shadow behind the whole binder page based on the theme color */
+    filter: drop-shadow(0 0 25px color-mix(in srgb, var(--user-theme) 25%, transparent));
+  }
+  
+  .pocket {
+    /* The magic that makes it glow the user's theme color when they hover an empty slot */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .pocket:hover {
+    border-color: var(--user-theme);
+    box-shadow: inset 0 0 15px color-mix(in srgb, var(--user-theme) 20%, transparent), 
+                0 0 15px color-mix(in srgb, var(--user-theme) 40%, transparent);
+  }
+</style>
