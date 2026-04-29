@@ -8,7 +8,8 @@
       "label": "Customer Support",
       "items": [
         { "label": "[email] Contact Us", "slug": "support/contact" },
-        { "label": "[star] App Features", "slug": "support/features" }
+        { "label": "[star] App Features", "slug": "support/features" },
+        { "label": "[comment] FAQ", "slug": "support/faq" }
       ]
     },
     {
