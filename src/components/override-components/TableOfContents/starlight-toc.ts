@@ -1,5 +1,4 @@
-import { PAGE_TITLE_ID } from "node_modules/@astrojs/starlight/constants";
-
+import { PAGE_TITLE_ID } from "@astrojs/starlight/constants";
 
 
 export class StarlightTOC extends HTMLElement {
@@ -100,9 +99,9 @@ export class StarlightTOC extends HTMLElement {
 	};
 
 	private getRootMargin(): `-${number}px 0% ${number}px` {
-		const navBarHeight = document.querySelector('header')?.getBoundingClientRect().height || 0;
-		// `<summary>` only exists in mobile ToC, so will fall back to 0 in large viewport component.
-		const mobileTocHeight = this.querySelector('summary')?.getBoundingClientRect().height || 0;
+		const navBarHeight = (document.querySelector('header') as HTMLElement)?.offsetHeight || 0;
+		const mobileTocHeight = (this.querySelector('summary') as HTMLElement)?.offsetHeight || 0;
+
 		/** Start intersections at nav height + 2rem padding. */
 		const top = navBarHeight + mobileTocHeight + 32;
 		/** End intersections `53px` later. This is slightly more than the maximum `margin-top` in Markdown content. */
