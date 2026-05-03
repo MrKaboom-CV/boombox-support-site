@@ -12,7 +12,7 @@ const { title, logo, logo_darkmode } = site;
 export const locales = locals;
 
 export default defineConfig({
-  site: "https://boomboxcv.com",
+  // site: "https://boomboxcv.com", // Temporarily disabled to prevent sitemap generation crash
   trailingSlash: 'always',
 
   image: {
@@ -34,7 +34,6 @@ export default defineConfig({
       components: {
         Head: "./src/components/override-components/Head.astro",
       },
-      sitemap: false, // Prevent sitemap from running and crashing the build
     }),
   ],
 
