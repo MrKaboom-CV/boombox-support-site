@@ -20,21 +20,20 @@ const { className }: { className?: string } = Astro.props;
 </style>
 
 <script>
-  const switcher = document.getElementById('theme-switcher-input') as HTMLInputElement | null;
-
   function applyTheme() {
+    const switcher = document.getElementById('theme-switcher-input') as HTMLInputElement | null;
     const savedTheme = localStorage.getItem("starlight-theme") || "dark";
     document.documentElement.dataset.theme = savedTheme;
     if (switcher) switcher.checked = savedTheme === "dark";
   }
 
-  if (switcher) {
-    switcher.addEventListener("change", () => {
-      const newTheme = switcher.checked ? "dark" : "light";
-      document.documentElement.dataset.theme = newTheme;
-      localStorage.setItem("starlight-theme", newTheme);
-    });
-  }
+  document.addEventListener("change", (e) => {
+    if ((e.target as HTMLElement)?.id !== 'theme-switcher-input') return;
+    const switcher = e.target as HTMLInputElement;
+    const newTheme = switcher.checked ? "dark" : "light";
+    document.documentElement.dataset.theme = newTheme;
+    localStorage.setItem("starlight-theme", newTheme);
+  });
 
   applyTheme();
   document.addEventListener("astro:after-swap", applyTheme);
