@@ -1,19 +1,7 @@
 {
-  "main": [
-    {
-      "icon": "facebook",
-      "label": "Facebook",
-      "href": "https://www.facebook.com/BooMBoxCardVault"
-    },
-    {
-      "icon": "instagram",
-      "label": "Instagram",
-      "href": "https://www.instagram.com/BooMBoxVault"
-    },
-    {
-      "icon": "x.com",
-      "label": "Twitter / X",
-      "href": "https://x.com/BooMBoxVault"
-    }
-  ]
+  "social": {
+    "facebook": "https://www.facebook.com/BooMBoxCardVault",
+    "instagram": "https://www.instagram.com/BooMBoxVault",
+    "x.com": "https://x.com/BooMBoxVault"
+  }
 }

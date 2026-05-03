@@ -2,27 +2,27 @@
   "main": [
     {
       "label": "[star] About",
-      "slug": "about"
+      "link": "/about/"
     },
     {
       "label": "Customer Support",
       "items": [
-        { "label": "[email] Contact Us", "slug": "support/contact" },
-        { "label": "[star] App Features", "slug": "support/features" },
-        { "label": "[comment] FAQ", "slug": "support/faq" }
+        { "label": "[email] Contact Us", "link": "/support/contact/" },
+        { "label": "[star] App Features", "link": "/support/features/" },
+        { "label": "[comment] FAQ", "link": "/support/faq/" }
       ]
     },
     {
       "label": "Release Notes",
       "items": [
-        { "label": "[rocket] App Updates", "slug": "updates/latest" }
+        { "label": "[rocket] App Updates", "link": "/updates/latest/" }
       ]
     },
     {
       "label": "Legal Vault",
       "items": [
-        { "label": "[document] Privacy Policy", "slug": "legal/privacy" },
-        { "label": "[seti:config] Terms of Service", "slug": "legal/terms" }
+        { "label": "[document] Privacy Policy", "link": "/legal/privacy/" },
+        { "label": "[seti:config] Terms of Service", "link": "/legal/terms/" }
       ]
     }
   ]
