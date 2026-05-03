@@ -75,8 +75,7 @@ body {
 
 /* --- THE UNIQUE INVERSE GLOW --- */
 
-/* 1. RED TEXT with NEON GREEN OUTLINE (Headings) */
-h1, h2, h3, h4, h5, .section-title {
+.glow-heading {
   color: #ff3333 !important; /* Vibrant Red */
   font-weight: 700;
   letter-spacing: 0.03em;
@@ -87,8 +86,7 @@ h1, h2, h3, h4, h5, .section-title {
     0 0 16px rgba(0, 255, 156, 0.4) !important; /* Wide GREEN aura */
 }
 
-/* 2. BLUE TEXT with NEON GOLD OUTLINE (Body Text) */
-p, li, .section-description, .light-text {
+.glow-body {
   color: #3388ff !important; /* Vibrant Blue */
   font-weight: 450; 
   text-shadow: 

@@ -12,8 +12,11 @@ h3,
 h4,
 h5,
 h6 {
-  @apply  font-bold leading-tight;
-  color: var(--sl-color-white);
+  @apply font-bold leading-tight glow-heading;
+}
+
+p, li, blockquote {
+  @apply glow-body;
 }
 
 h1,
