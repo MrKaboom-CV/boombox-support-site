@@ -1,7 +1,6 @@
 import { fileURLToPath } from "url";
 import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
-import { viewTransitions } from "astro-vtbot/starlight-view-transitions";
 import config from "./src/config/config.json";
 import { social as socialLinks } from "./src/config/social.json";
 import locals from "./src/config/locals.json";
@@ -41,7 +40,6 @@ export default defineConfig({
   output: "static",
 
   vite: {
-    plugins: [viewTransitions()],
     resolve: {
       alias: {
         "@": fileURLToPath(new URL("./src", import.meta.url)),
