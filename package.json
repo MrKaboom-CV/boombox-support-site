@@ -15,6 +15,9 @@
     "deploy:cf-workers": "npm run build && wrangler deploy",
     "preview:cf-workers": "npm run build && wrangler dev"
   },
+  "engines": {
+    "node": "20.x"
+  },
   "dependencies": {
     "@astro-community/astro-embed-youtube": "^0.5.10",
     "@astrojs/starlight": "0.22.4",
