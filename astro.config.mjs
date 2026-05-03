@@ -12,7 +12,7 @@ const { title, logo, logo_darkmode } = site;
 export const locales = locals;
 
 export default defineConfig({
-  site: "https://boomboxcv.com",
+  // site: "https://boomboxcv.com", // Temporarily disabled to prevent sitemap generation crash
   trailingSlash: 'always',
 
   image: {
@@ -27,7 +27,6 @@ export default defineConfig({
         dark: logo_darkmode,
         alt: "BooMBox Logo",
       },
-      sitemap: false, // The "Safety Catch" to prevent the sitemap from running.
       social: socialLinks,
       locales: {
         root: { label: 'English', lang: 'en' },
