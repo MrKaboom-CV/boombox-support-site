@@ -11,6 +11,13 @@ const { title, logo, logo_darkmode } = site;
 
 export const locales = locals;
 
+// Helper function to remove the default sitemap integration from Starlight
+const removeSitemap = (integrations) => {
+  const sitemapIndex = integrations.findIndex(i => i.name === '@astrojs/sitemap');
+  if (sitemapIndex > -1) integrations.splice(sitemapIndex, 1);
+  return integrations;
+}
+
 export default defineConfig({
   site: "https://boomboxcv.com",
   trailingSlash: 'always',
@@ -35,6 +42,7 @@ export default defineConfig({
         Head: "./src/components/override-components/Head.astro",
       },
     }),
+    { name: 'sitemap-remover', hooks: { 'astro:config:setup': ({ updateConfig }) => updateConfig({ integrations: removeSitemap([]) }) } },
   ],
 
   output: "static",
