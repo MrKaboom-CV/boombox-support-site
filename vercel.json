@@ -1,8 +1,5 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "engines": {
-    "node": "20.x"
-  },
   "framework": "astro",
   "buildCommand": "yarn run build",
   "outputDirectory": "dist"
