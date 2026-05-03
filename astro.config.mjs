@@ -36,6 +36,17 @@ export default defineConfig({
         Head: "./src/components/override-components/Head.astro",
       },
     }),
+    {
+      name: 'disable-sitemap',
+      hooks: {
+        'astro:config:setup': (options) => {
+          // Disable sitemap generation
+          options.config.integrations = options.config.integrations.filter(
+            (i) => i.name !== 'astro:sitemap'
+          );
+        },
+      },
+    },
   ],
 
   output: "static",
