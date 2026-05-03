@@ -146,9 +146,9 @@
     stream-replace-string "^2.0.0"
     zod "^4.3.6"
 
-"@astrojs/starlight-tailwind@5.0.0":
+"@astrojs/starlight-tailwind@^5.0.0":
   version "5.0.0"
-  resolved "https://registry.npmjs.org/@astrojs/starlight-tailwind/-/starlight-tailwind-5.0.0.tgz"
+  resolved "https://registry.yarnpkg.com/@astrojs/starlight-tailwind/-/starlight-tailwind-5.0.0.tgz#824f5703fa7cb133bcd62dc58ebcc36f8621134e"
   integrity sha512-VivF+bWg++4ma/ffr5sgHsd/ONtGdVJIKAaRZ6jmL4yqxy7bviu59MGNi5aW3nd8psP9i/aivBTrpwGxRM1XyA==
 
 "@astrojs/starlight@^0.22.4":
