@@ -12,16 +12,6 @@ const { title, logo, logo_darkmode } = site;
 
 export const locales = locals;
 
-// Custom integration to suppress sitemap errors
-const sitemapErrorSuppressor = {
-  name: 'sitemap-error-suppressor',
-  hooks: {
-    'astro:build:done': async () => {
-      // This hook runs and suppresses the sitemap error
-    },
-  },
-};
-
 export default defineConfig({
   site: "https://boomboxcv.com",
   trailingSlash: 'always',
@@ -46,7 +36,6 @@ export default defineConfig({
         Head: "./src/components/override-components/Head.astro",
       },
     }),
-    sitemapErrorSuppressor,
   ],
 
   output: "static",
