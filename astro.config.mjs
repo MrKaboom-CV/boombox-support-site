@@ -5,7 +5,7 @@ import { viewTransitions } from "astro-vtbot/starlight-view-transitions";
 
 import tailwindcss from "@tailwindcss/vite";
 import config from "./src/config/config.json";
-import social from "./src/config/social.json";
+import { social as socialLinks } from "./src/config/social.json";
 import locals from "./src/config/locals.json";
 import sidebar from "./src/config/sidebar.json";
 
@@ -39,7 +39,7 @@ image: {
         alt: "BooMBox Logo",
       },
       // @ts-ignore
-      social: social.main || [],
+      social: socialLinks,
       locales,
       sidebar: sidebar.main || [],
       customCss: ["./src/styles/global.css"],
