@@ -1,35 +1,34 @@
-# BooM!Box Mobile App
+# BooM!Box Public Website
 
-This is the official repository for the BooM!Box mobile application, a high-end trading card identification and vault management platform built with Expo (React Native).
+[![Built with Starlight](https://astro.badg.es/v2/built-with-starlight/tiny.svg)](https://starlight.astro.build)
 
-## 🚀 Get Started
+This repository contains the source code for the official BooM!Box public website and documentation hub, located at `boomboxcv.com`.
+
+The site is built with Astro and the Starlight documentation theme.
+
+## 🚀 Local Development
 
 1.  **Install dependencies**
 
-   ```bash
-   yarn install
-   ```
-
-2.  **Configure Environment Variables**
-
-    Create a `.env` file in the root of this project and add your Supabase and Gemini API keys.
-
-    ```
-    EXPO_PUBLIC_SUPABASE_URL=...
-    EXPO_PUBLIC_SUPABASE_ANON_KEY=...
+    ```bash
+    yarn install
     ```
 
-3.  **Start the app**
+2.  **Start the development server**
 
     ```bash
-    npx expo start
+    yarn dev
     ```
 
-    In the output, you'll find options to open the app in a development build, an emulator, or Expo Go.
+    The site will be available at `http://localhost:4321`.
 
-## 🔗 Key Technologies
+## 🧞 Commands
 
--   **Expo (React Native):** For cross-platform mobile development.
--   **Supabase:** For the backend, authentication, and database.
--   **Gemini 1.5 Flash:** Powers the AI-driven card identification engine.
+All commands are run from the root of the project, from a terminal:
 
+| Command          | Action                                         |
+| :--------------- | :--------------------------------------------- |
+| `yarn dev`       | Starts local dev server at `localhost:4321`    |
+| `yarn build`     | Build your production site to `./dist/`        |
+| `yarn preview`   | Preview your build locally, before deploying   |
+| `yarn astro ...` | Run CLI commands like `astro add`, `astro check` |
