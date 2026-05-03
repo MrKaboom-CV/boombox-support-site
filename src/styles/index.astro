@@ -1,6 +1,18 @@
 ---
 import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
 ---
-<StarlightPage frontmatter={{ title: 'Coming Soon', template: 'splash' }}>
-  <p>BooM!Box is currently under forensic construction.</p>
+
+<StarlightPage frontmatter={{ 
+  title: 'BooM!Box', 
+  template: 'splash',
+  hero: {
+    tagline: 'Forensic Card Identification & Market Intelligence.',
+    actions: [
+      { text: 'Coming Soon', link: '/', icon: 'right-arrow', variant: 'primary' }
+    ]
+  }
+}}>
+  <div class="text-center">
+    <p>The forensic bridge is being hardened. Secure deployment in progress.</p>
+  </div>
 </StarlightPage>
