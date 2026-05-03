@@ -36,7 +36,4 @@
     "typescript": "^5.0.0",
     "wrangler": "^4"
   },
-  "resolutions": {
-    "@astrojs/sitemap": "0.0.0"
-  }
 }
