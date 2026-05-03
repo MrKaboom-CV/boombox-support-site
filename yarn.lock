@@ -105,7 +105,7 @@
   dependencies:
     prismjs "^1.30.0"
 
-"@astrojs/sitemap@^3.0.5":
+"@astrojs/sitemap@0.0.0", "@astrojs/sitemap@^3.0.5":
   version "3.7.2"
   resolved "https://registry.yarnpkg.com/@astrojs/sitemap/-/sitemap-3.7.2.tgz#6647a3f42f75435970abf72d456e1e9d8360dcdc"
   integrity sha512-PqkzkcZTb5ICiyIR8VoKbIAP/laNRXi5tw616N1Ckk+40oNB8Can1AzVV56lrbC5GKSZFCyJYUVYqVivMisvpA==

@@ -9,7 +9,7 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro build || exit 0",
+    "build": "astro build",
     "preview": "astro preview",
     "check": "astro check",
     "deploy:cf-workers": "npm run build && wrangler deploy",
@@ -35,5 +35,8 @@
     "tailwindcss": "^4.1.17",
     "typescript": "^5.0.0",
     "wrangler": "^4"
+  },
+  "resolutions": {
+    "@astrojs/sitemap": "0.0.0"
   }
 }
