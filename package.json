@@ -38,7 +38,4 @@
     "tailwindcss": "^4.1.17",
     "typescript": "^5.0.0"
   },
-  "resolutions": {
-    "@astrojs/sitemap": "npm:empty-npm-package@1.0.1"
-  }
 }
