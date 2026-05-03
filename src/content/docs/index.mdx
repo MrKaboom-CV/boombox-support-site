@@ -1,137 +1,17 @@
 ---
-title: BooMBox | Advanced AI Forensics & Grading
-description: The ultimate toolkit for AI-driven trading card forensics and high-fidelity grading.
+title: BooM!Box
+description: Forensic Card Identification & Market Intelligence.
+template: splash
+hero:
+  tagline: The Future of Forensic Card Grading & Market Intel.
+  image:
+    file: ../../assets/logo.png
+  actions:
+    - text: Coming Summer 2026
+      link: /about/
+      icon: right-arrow
+      variant: primary
+    - text: View Documentation
+      link: /guides/example/
+      icon: external
 ---
-
-import Hero from "~/components/override-components/Hero.astro";
-
-<Hero />
-
-import Section from "~/components/Section.astro";
-import Card from "~/components/user-components/NewCard.astro";
-import Grid from "~/components/user-components/Grid.astro";
-
-<Section title="The Gold Standard
-<span class='light-text'>in AI Card Analysis</span>" description="Proprietary neural networks designed specifically for high-value collectibles.">
-
-<Grid columns={4}>
-  <Card title="AI Powered" icon="" iconColor="#FFD97B">
-    Our "Nano Banana" engine detects surface micro-scratches invisible to the naked eye. <img src="../../assets/optimized-boombox-icon.svg" alt="BooMBox AI" class="inline-block w-6 h-6 ml-2" />
-  </Card>
-  <Card title="Lightning Fast" icon="zap" iconColor="#7BE1A4">
-    Process 4K high-resolution scans and generate forensic reports in under 3 seconds.
-  </Card>
-  <Card title="Tamper Proof" icon="shield" iconColor="#FF8585">
-    Every report is anchored to the blockchain to ensure your card's data is never altered.
-  </Card>
-  <Card title="Fully Custom" icon="settings" iconColor="#979BFF">
-    Tailor your grading scales and report branding to fit your auction house or shop.
-  </Card>
-  <Card title="Insurance Ready" icon="document" iconColor="#FFB347">
-    Generate cryptographically verified pre-loss condition reports and live portfolio valuations.
-  </Card>
-</Grid>
-</Section>
-
-import ImageMod from "~/components/ImageMod.astro";
-
-<Section title="Meet the <span class='light-text'>BooMBox Family</span>" description="Professional-grade tools designed for serious collectors and grading houses.">
-
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
-  <div class="text-center">
-    <ImageMod
-      src="../../assets/BooMBox-logo01.png"
-      alt="BooMBox Logo Design"
-      class="mx-auto rounded-lg shadow-lg"
-      width={300}
-      height={200}
-    />
-    <h3 class="text-lg font-semibold mt-4 text-amber-400">Premium Branding</h3>
-    <p class="text-sm text-gray-600 dark:text-gray-400 mt-2">Professional logo designs for reports and certificates</p>
-  </div>
-  
-  <div class="text-center">
-    <ImageMod
-      src="../../assets/Boom_ico_main.png"
-      alt="BooMBox Main Icon"
-      class="mx-auto rounded-lg shadow-lg"
-      width={300}
-      height={200}
-    />
-    <h3 class="text-lg font-semibold mt-4 text-amber-400">Core Technology</h3>
-    <p class="text-sm text-gray-600 dark:text-gray-400 mt-2">The heart of our AI forensics engine</p>
-  </div>
-  
-  <div class="text-center">
-    <ImageMod
-      src="../../assets/BooMBox04.png"
-      alt="BooMBox Interface"
-      class="mx-auto rounded-lg shadow-lg"
-      width={300}
-      height={200}
-    />
-    <h3 class="text-lg font-semibold mt-4 text-amber-400">User Experience</h3>
-    <p class="text-sm text-gray-600 dark:text-gray-400 mt-2">Intuitive interface for professional results</p>
-  </div>
-</div>
-
-</Section>
-
-import HeroTabs from "~/components/HeroTabs.astro";
-import HeroTabsItem from "~/components/HeroTabsItem.astro";
-
-<Section
-  title="Analyze your collection <span class='light-text'>in 3 simple steps</span>"
-  description="From raw card to certified forensic report in minutes."
->
-  <HeroTabs>
-    <HeroTabsItem
-      title="Scan Your Asset"
-      subtitle="Upload a high-res photo or 300DPI scan of your card."
-      number={1}
-      image="../../assets/boombox-concept01.png" 
-      imageAlt="Step 1: Scanning with BooMBox"
-    />
-    <HeroTabsItem
-      title="AI Processing"
-      subtitle="Our AI Forensics engine analyzes centering, edges, and corners."
-      number={2}
-      image="../../assets/boombox.png" 
-      imageAlt="Step 2: AI Processing with BooMBox"
-    />
-    <HeroTabsItem
-      title="Generate Report"
-      subtitle="Receive a certified BooMBox digital grade and PDF report."
-      number={3}
-      image="../../assets/BooMBox03.png" 
-      imageAlt="Step 3: Generate BooMBox Report"
-    />
-  </HeroTabs>
-</Section>
-
-<Section title="Powered by <span class='light-text'>Advanced Technology</span>" description="Built with cutting-edge tools and optimized for performance.">
-
-<div class="flex justify-center items-center space-x-8 mt-8">
-  <div class="text-center">
-    <img src="../../assets/optimized-boombox-icon.svg" alt="BooMBox Technology" class="w-16 h-16 mx-auto mb-2" />
-    <p class="text-sm font-medium">AI Engine</p>
-  </div>
-  <div class="text-center">
-    <img src="../../assets/hero-star.svg" alt="Premium Quality" class="w-16 h-16 mx-auto mb-2" />
-    <p class="text-sm font-medium">Premium</p>
-  </div>
-  <div class="text-center">
-    <img src="../../assets/element.svg" alt="Modern Design" class="w-16 h-16 mx-auto mb-2" />
-    <p class="text-sm font-medium">Modern</p>
-  </div>
-</div>
-
-</Section>
-
-import TradeBinder from "~/components/user-components/TradeBinder.astro";
-
-<Section title="Interactive <span class='light-text'>Trade Binder</span>" description="A highly customizable, theme-driven 9-pocket digital binder for peer-to-peer trading.">
-  
-  <TradeBinder themeColor="#3388ff" watermark="../../assets/Boom-legacy-logo02.png" />
-
-</Section>

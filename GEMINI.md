@@ -26,3 +26,10 @@ The project has been migrated to a dedicated repository from the original monore
     *   **Visual Identity:** A unique and expertly executed "cyberpunk inverse glow" theme implemented with advanced CSS. This provides a strong, memorable brand identity.
     *   **Content:** Core pages (`about.md`, `privacy.md`) are in place.
     *   **Customization:** The Starlight theme has been heavily customized for a bespoke look and feel, including a custom header and translucent "glassmorphism" effects.
+
+---
+
+## 2. Infrastructure & Deployment
+
+*   **Status:** **IN PROGRESS**.
+*   **Domain Configuration:** The `boomboxcv.com` domain's nameservers have been manually pointed to `ns1.vercel-dns.com` and `ns2.vercel-dns.com` at the registrar level to establish Vercel as the authoritative DNS provider.
