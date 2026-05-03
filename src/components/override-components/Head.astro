@@ -1,7 +1,7 @@
 ---
 import { AstroFont } from "astro-font";
 import theme from "@/config/theme.json";
-const { head } = Astro.locals.starlightRoute;
+const head = Astro.locals.starlightRoute?.head || [];
 
 // font families
 const pf = theme.fonts.font_family.primary;

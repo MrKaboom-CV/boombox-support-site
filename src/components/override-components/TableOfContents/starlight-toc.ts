@@ -1,4 +1,5 @@
-import { PAGE_TITLE_ID } from "@astrojs/starlight/constants";
+// PAGE_TITLE_ID for Starlight 0.22.4 compatibility
+const PAGE_TITLE_ID = 'overview';
 
 
 export class StarlightTOC extends HTMLElement {
