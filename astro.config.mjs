@@ -35,17 +35,6 @@ export default defineConfig({
         Head: "./src/components/override-components/Head.astro",
       },
     }),
-    // This custom integration finds and removes the default sitemap plugin added by Starlight,
-    // which is causing a build crash in this specific version ecosystem.
-    {
-      name: 'sitemap-remover',
-      hooks: {
-        'astro:config:setup': ({ config, updateConfig }) => {
-          const integrations = config.integrations.filter((i) => i.name !== '@astrojs/sitemap');
-          updateConfig({ integrations });
-        },
-      },
-    },
   ],
 
   output: "static",
