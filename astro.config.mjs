@@ -34,6 +34,7 @@ export default defineConfig({
       components: {
         Head: "./src/components/override-components/Head.astro",
       },
+      sitemap: false, // Prevent sitemap from running and crashing the build
     }),
   ],
 
