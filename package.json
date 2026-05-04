@@ -1,41 +1,20 @@
 {
-  "name": "boombox-website",
+  "name": "@ironside/boombox-ebay-comps",
+  "version": "1.0.0",
   "private": true,
-  "version": "1.0.26",
-  "description": "BooMBox Card Vault- Your Ultimate Card Management Solution",
-  "author": "MrBooM",
-  "license": "MIT",
+  "description": "A hardened microservice for fetching eBay market data.",
+  "main": "dist/index.js",
   "type": "module",
   "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "check": "astro check",
-    "deploy:cf-workers": "npm run build && wrangler deploy",
-    "preview:cf-workers": "npm run build && wrangler dev"
-  },
-  "engines": {
-    "node": "20.x"
+    "build": "tsc",
+    "start": "node dist/index.js"
   },
   "dependencies": {
-    "@astro-community/astro-embed-youtube": "^0.5.10",
-    "@astrojs/starlight": "0.22.4",
-    "@astrojs/starlight-tailwind": "^1.0.2",
-    "@astrojs/tailwind": "^5.1.0",
-    "@tailwindcss/vite": "^4.1.17",
-    "@vercel/speed-insights": "^2.0.0",
-    "astro": "4.11.0",
-    "astro-font": "^1.1.0",
-    "marked": "^17.0.1",
-    "sharp": "^0.34.5",
-    "vite": "^7.2.6"
+    "express": "^4.19.2"
   },
   "devDependencies": {
-    "@astrojs/check": "^0.9.2",
-    "astro-vtbot": "^2.1.9",
-    "svgo": "^4.0.1",
-    "tailwindcss": "^4.1.17",
-    "typescript": "^5.0.0"
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.14.2",
+    "typescript": "^5.4.5"
   }
 }
